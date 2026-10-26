@@ -370,10 +370,10 @@
       .day-rule { position: relative; z-index: 1; display: block; width: 100%; height: 1px; margin-top: auto; background: currentColor; opacity: .42; }
       .day-placeholder { position: relative; z-index: 1; display: block; margin: 18px 0 0; max-width: 130px; color: var(--red); font: .62rem/1.6 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
       .programme-day:hover .day-placeholder { color: var(--cream); }
-      .day-placeholder--scheduled { max-width: 100%; color: #000; font: 600 clamp(2rem, 2.45vw, 3.25rem)/.84 var(--display); letter-spacing: -.015em; }
+      .day-placeholder--scheduled { max-width: 100%; color: #000; font: 600 clamp(2rem, 2.45vw, 3.25rem)/.84 var(--display); letter-spacing: -.015em; transition: color .25s ease; }
       .day-performer { display: block; white-space: nowrap; }
       .day-performer--long { font-size: clamp(1.45rem, 1.75vw, 2.25rem); }
-      .programme-day:hover .day-placeholder--scheduled { color: #000; }
+      .programme-day:hover .day-placeholder--scheduled { color: var(--cream); }
       .day-open { position: relative; z-index: 1; display: block; margin-top: 18px; color: currentColor; font: .61rem var(--mono); letter-spacing: .09em; text-transform: uppercase; }
       .programme-day:focus-visible { z-index: 2; outline: 3px solid var(--red); outline-offset: -3px; }
       .programme-modal { position: fixed; z-index: 40; inset: 0; display: grid; place-items: center; padding: 22px; }
