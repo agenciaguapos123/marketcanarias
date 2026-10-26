@@ -1,0 +1,1272 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d9062f" />
+    <meta
+      name="description"
+      content="BEEFEATER XMAS MARKET 2026 — MASPALOMAS. Muy pronto."
+    />
+    <title>BEEFEATER XMAS MARKET 2026 — MASPALOMAS</title>
+    <link rel="preload" href="fonts/Brixton/Brixton-Lead.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="fonts/P22%20Underground/P22Underground-Book.otf" as="font" type="font/otf" crossorigin />
+    <style>
+      @font-face {
+        font-family: "Brixton";
+        src: url("fonts/Brixton/Brixton-Lead.otf") format("opentype");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "P22 Underground";
+        src: url("fonts/P22%20Underground/P22Underground-Book.otf") format("opentype");
+        font-weight: 100 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "P22 Underground";
+        src: url("fonts/P22%20Underground/P22Underground-Heavy.otf") format("opentype");
+        font-weight: 700 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        --red: #dc062f;
+        --red-bright: #f21d42;
+        --wine: #88152a;
+        --deep: #3c0711;
+        --ink: #24030a;
+        --cream: #fffaf6;
+        --paper: #f6ebe6;
+        --gold: #ffffff;
+        --line: rgba(255, 250, 246, 0.34);
+        --display: "Brixton", Impact, sans-serif;
+        --body: "P22 Underground", Arial, sans-serif;
+        --mono: "P22 Underground", Arial, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; overflow-x: clip; overscroll-behavior-x: none; }
+      body {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        background: var(--red);
+        color: var(--cream);
+        font-family: var(--body);
+        overflow-x: clip;
+        overscroll-behavior-x: none;
+      }
+      main { max-width: 100%; overflow-x: clip; }
+      button, a { font: inherit; }
+      button { cursor: pointer; }
+      a { color: inherit; text-decoration: none; }
+      ::selection { color: var(--deep); background: #ffffff; }
+      ::-moz-selection { color: var(--deep); background: #ffffff; }
+
+      .grain {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        pointer-events: none;
+        opacity: .13;
+        mix-blend-mode: soft-light;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 30;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 27px clamp(20px, 4vw, 64px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        transition: background .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
+      }
+      .site-header.is-scrolled { background: var(--red); box-shadow: 0 10px 28px rgba(26, 0, 7, .2); }
+      .section[id], .food[id] { scroll-margin-top: 98px; }
+      .brand {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 122px;
+        font-family: var(--display);
+        font-size: 1.85rem;
+        font-weight: 700;
+        letter-spacing: -.07em;
+        line-height: .65;
+        transform: scaleX(1.06);
+      }
+      .brand small {
+        margin-top: 8px;
+        font-family: var(--body);
+        font-size: .44rem;
+        letter-spacing: .42em;
+        font-weight: 600;
+      }
+      .site-header .brand { min-width: 0; transform: none; }
+      .header-brand-logo { display: block; width: clamp(84px, 7.2vw, 116px); height: auto; }
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: clamp(14px, 2.2vw, 35px);
+        font-family: var(--display);
+        font-size: 1.05rem;
+        font-weight: 600;
+        letter-spacing: .05em;
+      }
+      .site-nav a { position: relative; }
+      .site-nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background: var(--cream);
+        transition: width .25s ease;
+      }
+      .site-nav a:hover::after, .site-nav a:focus-visible::after { width: 100%; }
+      .header-actions { display: flex; align-items: center; gap: 10px; }
+      .language-switcher {
+        display: flex;
+        align-items: center;
+        border: 1px solid rgba(255,255,255,.68);
+        border-radius: 999px;
+        padding: 3px;
+        background: rgba(60, 7, 17, .24);
+        backdrop-filter: blur(8px);
+      }
+      .language-switcher--mobile { display: none; }
+      .language-switcher button {
+        color: rgba(255,255,255,.68);
+        border: 0;
+        background: transparent;
+        padding: 5px 8px;
+        border-radius: 99px;
+        font-family: var(--mono);
+        font-size: .68rem;
+        line-height: 1;
+        transition: background .2s, color .2s;
+      }
+      .language-switcher button.active { background: var(--cream); color: var(--red); }
+      .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 38px;
+        color: var(--cream);
+        background: transparent;
+        border: 1px solid rgba(255,255,255,.68);
+        border-radius: 99px;
+      }
+
+      .hero {
+        isolation: isolate;
+        min-height: min(850px, 100svh);
+        height: max(690px, 100svh);
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: clamp(140px, 18vh, 175px) clamp(20px, 7.2vw, 130px) clamp(48px, 9.5vh, 96px);
+        overflow: hidden;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(35,0,7,.62) 0%, rgba(54,0,11,.16) 42%, rgba(28,0,6,.12) 73%),
+          linear-gradient(0deg, rgba(48,0,10,.78) 0%, rgba(48,0,10,.04) 54%, rgba(48,0,10,.22) 100%);
+      }
+      .hero-slides, .hero-slide {
+        position: absolute;
+        z-index: -2;
+        inset: 0;
+      }
+      .hero-slide {
+        opacity: 0;
+        transform: scale(1.045);
+        transition: opacity 1s ease, transform 7s ease;
+        background-position: center;
+        background-size: cover;
+      }
+      .hero-slide.active { opacity: 1; transform: scale(1); }
+      .hero-slide:nth-child(1) { background-image: url("assets/market-show2.png"); background-position: 28% 16%; background-size: auto 110%; }
+      .hero-slide:nth-child(2) { background-image: url("assets/market-artisans.png"); }
+      .hero-slide:nth-child(3) { background-image: url("assets/market-foodtrucks.png"); }
+      .hero-content { max-width: 950px; position: relative; }
+      .hero-content--brand { width: min(100%, 850px); margin-inline: auto; transform: translateY(-6vh); }
+      .hero-content--brand .eyebrow { justify-content: center; }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 17px;
+        color: var(--gold);
+        font-family: var(--mono);
+        font-size: clamp(.65rem, .8vw, .82rem);
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+      .eyebrow::before, .eyebrow::after { content:""; flex: 0 0 26px; width: 26px; height: 1px; background: currentColor; }
+      .hero-brand-title { width: clamp(370px, 42vw, 650px); margin: 0 auto; }
+      .hero-brand-mark { display: block; width: 100%; height: auto; }
+      .hero-event-date { margin: -10px auto 0; color: var(--cream); text-align: center; text-transform: uppercase; }
+      .hero-event-date span { display: block; font: 600 clamp(1rem, 1.35vw, 1.4rem) var(--mono); letter-spacing: .22em; }
+      .hero-event-date strong { display: block; margin-top: 8px; font: 600 clamp(2.7rem, 5vw, 5.2rem)/.76 var(--display); letter-spacing: .02em; white-space: nowrap; }
+      .hero-bottom {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        bottom: clamp(34px, 6.5vh, 70px);
+        display: flex;
+        width: min(850px, calc(100% - 40px));
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 36px;
+        margin: 0;
+        transform: translateX(-50%);
+      }
+      .hero-description { max-width: 390px; margin: 0; font-size: clamp(.84rem, 1vw, 1.02rem); line-height: 1.65; }
+      .hero-meta {
+        font-family: var(--display);
+        font-size: clamp(1.35rem, 2vw, 2rem);
+        font-weight: 600;
+        letter-spacing: .01em;
+        line-height: .9;
+        text-align: right;
+        text-transform: uppercase;
+      }
+      .hero-meta small { display: block; margin-bottom: 5px; color: var(--gold); font: 500 .61rem var(--mono); letter-spacing: .1em; }
+      .slide-controls {
+        position: absolute;
+        z-index: 2;
+        right: clamp(20px, 4vw, 64px);
+        bottom: clamp(37px, 8.5vh, 86px);
+        display: flex;
+        gap: 8px;
+      }
+      .slide-dot {
+        width: 34px;
+        height: 4px;
+        padding: 0;
+        border: 0;
+        background: rgba(255,255,255,.38);
+        transition: width .25s, background .25s;
+      }
+      .slide-dot.active { width: 52px; background: var(--cream); }
+      .scroll-label {
+        position: absolute;
+        left: clamp(20px, 4vw, 64px);
+        bottom: 26px;
+        color: rgba(255,255,255,.78);
+        font: .58rem var(--mono);
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+      .scroll-label::before { content: "↓"; margin-right: 8px; color: var(--gold); font-size: .8rem; }
+
+      .section { position: relative; padding: clamp(74px, 10vw, 160px) clamp(20px, 7.2vw, 130px); }
+      .section-content { width: min(100%, 1440px); margin-inline: auto; }
+      .section-label {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 20px;
+        padding: 0;
+      }
+      .section-label span:first-child { font: 600 clamp(3.8rem, 9.3vw, 10rem)/.72 var(--display); letter-spacing: -.025em; text-transform: uppercase; }
+      .section-label span:not(:only-child):last-child { align-self: end; padding-bottom: .75em; opacity: .68; font: 500 .67rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+      .section-heading {
+        max-width: 520px;
+        margin: 20px 0 0;
+        font: 500 clamp(.76rem, 1.1vw, 1.02rem)/1.58 var(--mono);
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+
+      .programme { background: var(--paper); color: var(--deep); overflow: hidden; }
+      .programme::before {
+        content: "2026";
+        position: absolute;
+        top: 42px;
+        right: -1vw;
+        color: rgba(220, 6, 47, .08);
+        font: 900 clamp(13rem, 29vw, 33rem) / .72 var(--display);
+        letter-spacing: -.1em;
+        pointer-events: none;
+      }
+      .programme .section-heading { max-width: 900px; }
+      .programme-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-top: 34px;
+      }
+      .programme-intro p { margin: 0; max-width: 350px; font-size: .95rem; line-height: 1.68; }
+      .programme-note { color: var(--red); font: 600 clamp(1.25rem, 2vw, 2.1rem)/.92 var(--display); letter-spacing: 0; text-transform: uppercase; }
+      .programme-hours { margin-top: clamp(42px, 6vw, 72px); }
+      .programme-hours > p { margin: 0 0 18px; color: var(--red); font: 500 clamp(.96rem, 1.25vw, 1.16rem) var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+      .programme-hours-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(60,7,17,.45); border-left: 1px solid rgba(60,7,17,.45); }
+      .programme-hour { min-height: 165px; padding: 23px 24px 26px; border-right: 1px solid rgba(60,7,17,.45); border-bottom: 1px solid rgba(60,7,17,.45); }
+      .programme-hour > span { display: block; font: .86rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+      .programme-hour strong { display: block; margin-top: 17px; color: var(--red); font: 600 clamp(2.3rem, 3.5vw, 4rem)/.76 var(--display); letter-spacing: -.015em; }
+      .programme-hour small { display: block; margin-top: 11px; color: rgba(60,7,17,.68); font: .84rem/1.45 var(--mono); letter-spacing: .02em; }
+      .programme-days-wrap { position: relative; margin-top: clamp(50px, 7vw, 90px); }
+      .programme-scroll-next { display: none; }
+      .programme-days {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        border-top: 1px solid rgba(60,7,17,.45);
+        border-left: 1px solid rgba(60,7,17,.45);
+      }
+      .programme-day {
+        position: relative;
+        width: 100%;
+        min-height: clamp(340px, 32vw, 490px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: clamp(18px, 2.2vw, 35px);
+        appearance: none;
+        color: inherit;
+        font: inherit;
+        text-align: left;
+        cursor: pointer;
+        border: 0;
+        border-right: 1px solid rgba(60,7,17,.45);
+        border-bottom: 1px solid rgba(60,7,17,.45);
+        background: rgba(255,250,246,.18);
+        overflow: hidden;
+        transition: background .25s ease, color .25s ease;
+      }
+      .programme-day:nth-child(even) { background: rgba(220,6,47,.04); }
+      .programme-day:hover { color: var(--cream); background: var(--red); }
+      .programme-day::after {
+        content: "✦";
+        position: absolute;
+        right: -13px;
+        bottom: -35px;
+        color: rgba(220,6,47,.1);
+        font: 900 9rem/.7 var(--display);
+        transition: color .25s ease;
+      }
+      .programme-day:hover::after { color: rgba(255,250,246,.14); }
+      .day-weekday { position: relative; z-index: 1; display: block; font: 600 clamp(1.6rem, 2.6vw, 3.1rem)/.76 var(--display); letter-spacing: -.01em; text-transform: uppercase; }
+      .day-date { position: relative; z-index: 1; display: block; margin-top: 14px; color: var(--red); font: 700 clamp(5rem, 7.7vw, 9rem)/.66 var(--display); letter-spacing: -.08em; }
+      .programme-day:hover .day-date { color: var(--gold); }
+      .day-rule { position: relative; z-index: 1; display: block; width: 100%; height: 1px; margin-top: auto; background: currentColor; opacity: .42; }
+      .day-placeholder { position: relative; z-index: 1; display: block; margin: 18px 0 0; max-width: 130px; color: var(--red); font: .62rem/1.6 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+      .programme-day:hover .day-placeholder { color: var(--cream); }
+      .day-open { position: relative; z-index: 1; display: block; margin-top: 18px; color: currentColor; font: .61rem var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+      .programme-day:focus-visible { z-index: 2; outline: 3px solid var(--red); outline-offset: -3px; }
+      .programme-modal { position: fixed; z-index: 40; inset: 0; display: grid; place-items: center; padding: 22px; }
+      .programme-modal[hidden] { display: none; }
+      .programme-modal-backdrop { position: absolute; inset: 0; background: rgba(22,2,6,.78); backdrop-filter: blur(6px); }
+      .programme-modal-panel { position: relative; z-index: 1; width: min(100%, 690px); padding: clamp(34px, 6vw, 72px); color: var(--cream); background: var(--red); box-shadow: 0 30px 90px rgba(0,0,0,.36); }
+      .programme-modal-close { position: absolute; top: 18px; right: 18px; display: grid; place-items: center; width: 42px; height: 42px; padding: 0; color: var(--cream); border: 1px solid rgba(255,250,246,.72); border-radius: 50%; background: transparent; font: 300 2rem/.8 Arial, sans-serif; cursor: pointer; }
+      .programme-modal-close:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+      .programme-modal-label { margin: 0; color: rgba(255,250,246,.78); font: .67rem var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+      .programme-modal h2 { max-width: 520px; margin: 28px 0 0; font: 600 clamp(4.3rem, 12vw, 7.8rem)/.69 var(--display); letter-spacing: -.02em; text-transform: uppercase; }
+      .programme-modal-copy { max-width: 400px; margin: 31px 0 0; font-size: .98rem; line-height: 1.7; }
+      body.modal-open { overflow: hidden; }
+
+      .market { background-color: var(--red); background-image: linear-gradient(105deg, rgba(222,0,45,.5) 0%, rgba(222,0,45,.18) 45%, rgba(126,0,30,.42) 100%), linear-gradient(0deg, rgba(113,0,28,.22), rgba(238,0,49,.03) 42%, rgba(113,0,28,.18)), url("assets/background2.png"); background-position: center, center, center; background-size: cover, cover, 100% auto; background-repeat: no-repeat; overflow: hidden; }
+      .market .section-heading { max-width: 850px; }
+      .market .section-heading em { color: var(--gold); font-style: normal; }
+      .market-intro { max-width: 430px; margin: 35px 0 0; font-size: 1rem; line-height: 1.72; }
+      .market-hours { display: grid; grid-template-columns: 1fr; gap: 6px; max-width: 430px; margin: 28px 0 0; padding: 15px 0; border-top: 1px solid rgba(255,250,246,.45); border-bottom: 1px solid rgba(255,250,246,.45); }
+      .market-hours > span { font: .62rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+      .market-hours strong { color: var(--cream); font: 600 clamp(1.25rem, 2vw, 2.1rem)/.8 var(--display); letter-spacing: -.035em; text-align: left; white-space: nowrap; }
+      .market-hours small { grid-column: auto; color: rgba(255,250,246,.7); font: .62rem/1.45 var(--mono); letter-spacing: .02em; }
+      .market-cta { position: relative; display: inline-flex; align-items: center; justify-content: center; max-width: 100%; margin: 30px 0 0; padding: 16px 22px; overflow: hidden; color: var(--red); border: 1px solid var(--cream); background: var(--cream); font: 600 .67rem/1.25 var(--mono); letter-spacing: .08em; text-align: center; text-transform: uppercase; transition: transform .2s ease, background .2s ease, color .2s ease; }
+      .market-cta::after { content: ""; position: absolute; inset: 0 auto 0 -60%; width: 45%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.96), transparent); transform: skewX(-20deg) translateX(-170%); animation: market-cta-shine 3.6s ease-in-out infinite; }
+      .market-cta:hover, .market-cta:focus-visible { color: var(--cream); background: var(--red); transform: translateY(-2px); }
+      .market-cta:focus-visible { outline: 2px solid var(--cream); outline-offset: 4px; }
+      @keyframes market-cta-shine { 0%, 58% { transform: skewX(-20deg) translateX(-170%); } 82%, 100% { transform: skewX(-20deg) translateX(460%); } }
+      .market-directory { margin-top: clamp(55px, 8vw, 110px); }
+      .market-filters { display: flex; flex-wrap: wrap; gap: 8px; padding: 15px 0; border-top: 1px solid rgba(255,250,246,.48); border-bottom: 1px solid rgba(255,250,246,.48); }
+      .market-filter { min-height: 39px; padding: 10px 13px; color: var(--cream); border: 1px solid rgba(255,250,246,.58); border-radius: 999px; background: transparent; font: 500 .61rem/1 var(--mono); letter-spacing: .055em; text-transform: uppercase; transition: background .2s ease, color .2s ease, transform .2s ease; }
+      .market-filter:hover, .market-filter:focus-visible { border-color: var(--cream); transform: translateY(-1px); }
+      .market-filter:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+      .market-filter.active { color: var(--red); border-color: var(--cream); background: var(--cream); }
+      .market-slider { display: grid; grid-template-columns: 52px minmax(0, 1fr) 52px; align-items: stretch; gap: 10px; margin-top: 24px; }
+      .market-slider-control { display: grid; place-items: center; min-height: 300px; padding: 0; color: var(--cream); border: 1px solid rgba(255,250,246,.58); background: transparent; font: 2rem/.8 Arial, sans-serif; transition: color .2s ease, background .2s ease; }
+      .market-slider-control:hover, .market-slider-control:focus-visible { color: var(--red); background: var(--cream); }
+      .market-slider-control:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+      .market-logo-viewport { overflow-x: auto; scrollbar-width: none; scroll-behavior: smooth; scroll-snap-type: x mandatory; }
+      .market-logo-viewport::-webkit-scrollbar { display: none; }
+      .market-logo-track { display: flex; width: max-content; min-width: 100%; gap: 1px; }
+      .market-logo-card { flex: 0 0 clamp(215px, 25vw, 340px); min-height: 300px; display: grid; place-items: center; padding: clamp(22px, 3vw, 42px); color: var(--deep); background: var(--cream); scroll-snap-align: start; }
+      .market-logo-card img { display: block; width: min(100%, 240px); max-height: 126px; object-fit: contain; }
+      .market-logo-card--generic { align-content: center; gap: 13px; text-align: center; }
+      .market-logo-card--generic > span { color: rgba(60,7,17,.66); font: .66rem var(--mono); letter-spacing: .14em; }
+      .market-logo-card--generic > strong { color: var(--red); font: 600 clamp(4.3rem, 7vw, 7rem)/.72 var(--display); letter-spacing: -.015em; }
+      @media (prefers-reduced-motion: reduce) { .market-logo-viewport { scroll-behavior: auto; } }
+
+      .food { color: var(--deep); background: var(--cream); padding-bottom: 0; }
+      .food-layout { display: grid; grid-template-columns: .91fr 1.09fr; min-height: 730px; margin-top: 0; }
+      .food-copy { padding: clamp(74px, 10vw, 155px) clamp(20px, 5vw, 105px) clamp(74px, 9vw, 130px) clamp(20px, 7.2vw, 130px); }
+      .food-copy .section { padding: 0; }
+      .food-copy .section-label { width: min(100%, 550px); }
+      .food-copy .section-heading { max-width: 580px; }
+      .food-copy p { max-width: 360px; margin: 34px 0 0; font-size: .94rem; line-height: 1.72; }
+      .food-schedule { max-width: 470px; margin-top: 42px; border-top: 1px solid rgba(60,7,17,.4); }
+      .schedule-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 16px; row-gap: 5px; padding: 14px 0; border-bottom: 1px solid rgba(60,7,17,.4); }
+      .schedule-row > span { font: .61rem var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+      .schedule-row strong { color: var(--red); font: 600 clamp(1.25rem, 1.9vw, 2.1rem)/.8 var(--display); letter-spacing: -.035em; text-align: right; white-space: nowrap; }
+      .schedule-row small { grid-column: 1 / -1; color: rgba(60,7,17,.65); font: .63rem/1.45 var(--mono); letter-spacing: .02em; }
+      .food-image { position: relative; min-height: 460px; overflow: hidden; }
+      .food-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .food-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(220,6,47,.22), transparent 45%); mix-blend-mode: multiply; }
+
+      .collaborate { padding-block: clamp(46px, 5vw, 76px); color: var(--cream); background: var(--red); overflow: hidden; }
+      .collaborate .section-content { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); align-items: stretch; gap: clamp(28px, 4vw, 64px); }
+      .collaborate-main { min-width: 0; }
+      .logo-tier { margin-top: clamp(28px, 3.6vw, 48px); }
+      .logo-tier + .logo-tier { margin-top: clamp(20px, 2.6vw, 34px); }
+      .logo-tier-heading { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 6px; margin-bottom: 8px; }
+      .logo-tier-heading span { color: rgba(255,250,246,.7); font: .63rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+      .logo-tier-heading h2 { margin: 0; font: 600 clamp(3.4rem, 6vw, 6.5rem)/.68 var(--display); letter-spacing: -.015em; text-transform: uppercase; }
+      .logo-window { overflow: hidden; border-top: 1px solid rgba(255,250,246,.55); border-bottom: 1px solid rgba(255,250,246,.55); }
+      .logo-track {
+        display: flex;
+        width: max-content;
+        animation: marquee 23s linear infinite;
+      }
+      .logo-item {
+        display: grid;
+        place-items: center;
+        border-right: 1px solid rgba(255,250,246,.35);
+      }
+      .logo-item--sponsor { min-width: clamp(250px, 24vw, 380px); min-height: clamp(118px, 11vw, 165px); padding: 20px clamp(26px, 3.6vw, 54px); }
+      .logo-item--collaborator { min-width: clamp(180px, 17vw, 270px); min-height: clamp(78px, 7.5vw, 106px); padding: 14px clamp(18px, 2.4vw, 34px); }
+      .logo-track--collaborators { animation-duration: 28s; animation-direction: reverse; }
+      .logo-image { display: block; object-fit: contain; }
+      .logo-item--sponsor .logo-image { width: min(100%, 290px); max-height: clamp(76px, 8vw, 118px); }
+      .logo-item--collaborator .logo-image { width: min(100%, 190px); max-height: clamp(44px, 4.8vw, 64px); }
+      .logo-image--screen { mix-blend-mode: screen; }
+      .logo-image--beefeater { filter: invert(1) brightness(1.35); mix-blend-mode: screen; }
+      .organizer-block { display: grid; justify-items: start; gap: 14px; margin-top: clamp(28px, 3.5vw, 48px); padding-top: clamp(22px, 2.8vw, 36px); border-top: 1px solid rgba(255,250,246,.55); }
+      .organizer-block .logo-tier-heading { width: 100%; margin-bottom: 0; }
+      .organizer-logos { display: grid; grid-template-columns: 1fr 1.65fr 1fr; align-items: center; width: min(100%, 1040px); margin: 0 auto; gap: clamp(24px, 4.5vw, 72px); }
+      .organizer-logo { display: block; justify-self: center; width: 100%; object-fit: contain; }
+      .organizer-logo--inner { max-width: 155px; max-height: 112px; }
+      .organizer-logo--guapos { max-width: 370px; max-height: 108px; }
+      .organizer-logo--discordia { max-width: 295px; max-height: 100px; }
+      .collaborate-media { min-width: 0; }
+      .collaborate-media-slot { display: grid; min-height: clamp(390px, 38vw, 560px); height: 100%; place-items: center; padding: 24px; border: 1px solid rgba(255,250,246,.68); background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.025)); }
+      .collaborate-media-slot span { color: rgba(255,250,246,.68); font: .61rem var(--mono); letter-spacing: .13em; text-align: center; text-transform: uppercase; }
+      @keyframes marquee { to { transform: translateX(-50%); } }
+
+      .participation-modal { position: fixed; z-index: 41; inset: 0; display: grid; place-items: center; padding: 22px; }
+      .participation-modal[hidden] { display: none; }
+      .participation-modal-backdrop { position: absolute; inset: 0; background: rgba(22,2,6,.78); backdrop-filter: blur(6px); }
+      .participation-panel { position: relative; z-index: 1; width: min(100%, 720px); max-height: min(760px, calc(100svh - 44px)); overflow-y: auto; padding: clamp(34px, 6vw, 68px); color: var(--deep); background: var(--paper); box-shadow: 0 30px 90px rgba(0,0,0,.36); }
+      .participation-close { position: absolute; top: 18px; right: 18px; display: grid; place-items: center; width: 42px; height: 42px; padding: 0; color: var(--deep); border: 1px solid rgba(60,7,17,.65); border-radius: 50%; background: transparent; font: 300 2rem/.8 Arial, sans-serif; cursor: pointer; }
+      .participation-close:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+      .participation-kicker { margin: 0; color: var(--red); font: .67rem var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+      .participation-panel h2 { max-width: 510px; margin: 26px 0 0; font: 600 clamp(3.8rem, 9vw, 6.2rem)/.72 var(--display); letter-spacing: -.02em; text-transform: uppercase; }
+      .participation-copy { max-width: 460px; margin: 25px 0 0; font-size: .95rem; line-height: 1.65; }
+      .participation-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; margin-top: 30px; }
+      .participation-field { display: grid; gap: 8px; color: var(--deep); font: .61rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+      .participation-field--wide { grid-column: 1 / -1; }
+      .participation-field input, .participation-field select { width: 100%; min-height: 49px; padding: 11px 13px; color: var(--deep); border: 1px solid rgba(60,7,17,.42); border-radius: 0; background: rgba(255,255,255,.48); font: 500 .9rem var(--body); }
+      .participation-field input:focus, .participation-field select:focus { outline: 2px solid var(--red); outline-offset: 2px; }
+      .participation-submit { grid-column: 1 / -1; justify-self: start; margin-top: 7px; padding: 15px 20px; color: var(--cream); border: 1px solid var(--red); background: var(--red); font: 600 .66rem var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+      .participation-status { grid-column: 1 / -1; margin: 0; color: rgba(60,7,17,.72); font-size: .76rem; line-height: 1.55; }
+
+      .contact { color: var(--cream); background: var(--deep); }
+      .contact::before {
+        content: "XMAS";
+        position: absolute;
+        right: -5vw;
+        bottom: -4vw;
+        color: rgba(255,255,255,.035);
+        font: 900 clamp(11rem, 31vw, 35rem)/.7 var(--display);
+        letter-spacing: -.1em;
+        pointer-events: none;
+      }
+      .contact-top { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px; }
+      .contact .section-heading { max-width: 780px; }
+      .contact-top p { max-width: 300px; margin: 0 0 6px; color: rgba(255,250,246,.72); font-size: .91rem; line-height: 1.7; }
+      .contact-grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr; margin-top: clamp(70px, 9vw, 130px); border-top: 1px solid var(--line); }
+      .contact-cell { min-height: 205px; padding: 27px clamp(16px, 2.5vw, 38px) 30px 0; border-right: 1px solid var(--line); }
+      .contact-cell:not(:first-child) { padding-left: clamp(16px, 2.5vw, 38px); }
+      .contact-cell:last-child { border-right: 0; }
+      .contact-cell > span { display: block; color: var(--gold); font: .6rem var(--mono); letter-spacing: .11em; text-transform: uppercase; }
+      .contact-cell strong { display: block; max-width: 270px; margin-top: 24px; font: 600 clamp(2rem, 3.6vw, 4rem)/.77 var(--display); letter-spacing: -.01em; text-transform: uppercase; }
+      .contact-cell p { margin: 15px 0 0; max-width: 250px; color: rgba(255,250,246,.72); font-size: .78rem; line-height: 1.58; }
+      .contact-cta { display: inline-block; margin-top: 15px; border-bottom: 1px solid var(--gold); color: var(--gold); font: .67rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+      .footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-top: clamp(90px, 13vw, 180px); padding-top: 20px; border-top: 1px solid var(--line); }
+      .footer .brand { align-items: flex-start; }
+      .footer-brand-logo { display: inline-flex; width: clamp(150px, 12vw, 210px); }
+      .footer-brand-logo img { display: block; width: 100%; height: auto; }
+      .footer-details { display: grid; justify-items: end; gap: 10px; }
+      .footer-note { margin: 0; color: rgba(255,250,246,.5); font: .58rem var(--mono); line-height: 1.6; letter-spacing: .04em; text-align: right; text-transform: uppercase; }
+      .legal-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px; }
+      .legal-link { padding: 0; color: rgba(255,250,246,.82); border: 0; border-bottom: 1px solid rgba(255,250,246,.44); background: transparent; font: .61rem/1.35 var(--mono); letter-spacing: .07em; text-transform: uppercase; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+      .legal-link:hover, .legal-link:focus-visible { color: var(--cream); border-color: var(--cream); }
+      .legal-link:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+      .legal-modal { position: fixed; z-index: 45; inset: 0; display: grid; place-items: center; padding: 24px; }
+      .legal-modal[hidden] { display: none; }
+      .legal-modal-backdrop { position: absolute; inset: 0; background: rgba(22,2,6,.8); backdrop-filter: blur(7px); }
+      .legal-modal-panel { position: relative; z-index: 1; width: min(100%, 820px); max-height: min(800px, calc(100svh - 48px)); overflow-y: auto; padding: clamp(38px, 6vw, 72px); color: var(--deep); background: var(--paper); box-shadow: 0 30px 90px rgba(0,0,0,.36); }
+      .legal-modal-close { position: absolute; top: 17px; right: 17px; display: grid; place-items: center; width: 42px; height: 42px; padding: 0; color: var(--deep); border: 1px solid rgba(60,7,17,.65); border-radius: 50%; background: transparent; font: 300 2rem/.8 Arial, sans-serif; cursor: pointer; }
+      .legal-modal-close:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+      .legal-document { max-width: 650px; }
+      .legal-document-kicker { margin: 0; color: var(--red); font: .67rem var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+      .legal-document h2 { margin: 23px 0 0; font: 600 clamp(3.6rem, 8vw, 6.2rem)/.72 var(--display); letter-spacing: -.02em; text-transform: uppercase; }
+      .legal-document p { margin: 22px 0 0; font-size: .97rem; line-height: 1.72; }
+      .legal-document strong { color: var(--red); font-weight: 600; }
+
+      .mobile-nav { display: none; }
+      @media (max-width: 760px) {
+        .market { background-position: center, center, 54% center; background-size: cover; }
+        .site-header { padding-top: 21px; }
+        .brand { min-width: 92px; font-size: 1.42rem; }
+        .brand small { margin-top: 7px; font-size: .36rem; }
+        .site-header .brand { position: absolute; z-index: 1; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .header-actions { position: relative; z-index: 2; margin-left: auto; }
+        .header-brand-logo { width: clamp(86px, 25vw, 105px); }
+        .site-nav { display: none; }
+        .language-switcher--desktop { display: none; }
+        .language-switcher--mobile { position: absolute; top: calc(100% + 7px); right: 0; display: flex; }
+        .menu-toggle { display: block; }
+        .mobile-nav {
+          position: fixed;
+          z-index: 35;
+          top: 0; right: 0; bottom: 0; left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 20px;
+          padding: 90px 36px;
+          color: var(--cream);
+          background: var(--deep);
+          clip-path: inset(0 0 100% 0);
+          transition: clip-path .35s ease;
+        }
+        .mobile-nav.open { clip-path: inset(0 0 0 0); }
+        .mobile-nav a { font: 700 clamp(3.7rem, 14vw, 6rem)/.72 var(--display); letter-spacing: -.015em; text-transform: uppercase; }
+        .mobile-nav-close { position: absolute; top: 24px; right: 22px; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; color: var(--cream); background: none; font-size: 1.2rem; }
+        .hero { min-height: 720px; height: 100svh; padding: 130px 20px 72px; }
+        .hero-content--brand { transform: translateY(-4vh); }
+        .hero-brand-title { width: min(96vw, 440px); }
+        .hero-event-date { margin-top: -8px; }
+        .hero-event-date span { font-size: 1.08rem; }
+        .hero-event-date strong { margin-top: 7px; font-size: clamp(2.55rem, 10.5vw, 3.6rem); }
+        .hero-slide:nth-child(1) { background-position: 50% 16%; }
+        .hero-bottom { bottom: 44px; display: block; }
+        .hero-description { max-width: 335px; }
+        .hero-meta { margin-top: 24px; text-align: left; }
+        .slide-controls { right: 20px; bottom: 30px; }
+        .scroll-label { display: none; }
+        .section { padding: 72px 20px; }
+        .section-heading { font-size: .8rem; line-height: 1.58; }
+        .programme::before { top: 94px; right: -32px; }
+        .programme-intro, .contact-top { grid-template-columns: 1fr; gap: 25px; }
+        .programme-intro { margin-top: 30px; }
+        .programme-hours-grid { grid-template-columns: 1fr; }
+        .programme-hour { min-height: 0; }
+        .programme-days { grid-template-columns: repeat(5, 155px); width: 100%; max-width: 100%; margin-right: 0; overflow-x: auto; scrollbar-width: none; }
+        .programme-days::-webkit-scrollbar { display: none; }
+        .programme-scroll-next { position: absolute; z-index: 5; top: 50%; right: 0; display: grid; place-items: center; width: 58px; height: 68px; padding: 0; color: var(--cream); border: 1px solid var(--cream); border-right: 0; background: var(--red); font: 2.35rem/.8 Arial, sans-serif; transform: translateY(-50%); box-shadow: -18px 0 24px rgba(246,235,230,.88); }
+        .programme-scroll-next:focus-visible { outline: 3px solid var(--deep); outline-offset: 3px; }
+        .programme-day { min-height: 330px; width: 155px; padding: 18px; }
+        .day-weekday { font-size: 1.7rem; }
+        .day-date { font-size: 5.7rem; }
+        .market-intro, .market-hours, .market-cta { margin-left: 0; }
+        .market-filters { flex-wrap: nowrap; width: 100%; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+        .market-filters::-webkit-scrollbar { display: none; }
+        .market-filter { flex: 0 0 auto; }
+        .market-slider { grid-template-columns: 44px minmax(0, 1fr) 44px; gap: 7px; }
+        .market-slider-control { min-height: 270px; font-size: 1.65rem; }
+        .market-logo-card { flex-basis: calc(100vw - 142px); min-height: 270px; }
+        .food { padding: 0; }
+        .food-layout { grid-template-columns: 1fr; min-height: 0; }
+        .food-copy { padding: 72px 20px; }
+        .food-image { min-height: 430px; }
+        .schedule-row { grid-template-columns: minmax(0, 1fr) auto; }
+        .collaborate { padding-block: 48px; }
+        .collaborate .section-content { grid-template-columns: 1fr; gap: 32px; }
+        .logo-tier { margin-top: 30px; }
+        .logo-tier + .logo-tier { margin-top: 24px; }
+        .logo-item--sponsor { min-width: 225px; min-height: 118px; padding: 18px 27px; }
+        .logo-item--collaborator { min-width: 175px; min-height: 78px; padding: 13px 22px; }
+        .logo-item--sponsor .logo-image { max-height: 76px; }
+        .logo-item--collaborator .logo-image { max-height: 48px; }
+        .organizer-block { margin-top: 28px; padding-top: 22px; }
+        .collaborate-media-slot { min-height: 275px; height: auto; }
+        .organizer-logos { grid-template-columns: 1fr 1fr; row-gap: 28px; column-gap: 22px; }
+        .organizer-logo--guapos { grid-column: 1 / -1; grid-row: 1; max-width: 320px; }
+        .organizer-logo--inner { grid-column: 1; grid-row: 2; max-width: 120px; }
+        .organizer-logo--discordia { grid-column: 2; grid-row: 2; max-width: 215px; }
+        .participation-form { grid-template-columns: 1fr; }
+        .participation-field--wide, .participation-submit, .participation-status { grid-column: auto; }
+        .contact-top p { margin-bottom: 0; }
+        .contact-grid { grid-template-columns: 1fr; margin-top: 60px; }
+        .contact-cell, .contact-cell:not(:first-child) { min-height: 0; padding: 27px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+        .footer { align-items: flex-start; flex-direction: column; margin-top: 78px; }
+        .footer-note { text-align: left; }
+
+        /* Mobile: composición más directa, legible y centrada. */
+        .hero-bottom { text-align: center; }
+        .hero-description { margin-inline: auto; font-size: 1rem; line-height: 1.58; }
+        .hero-meta { text-align: center; }
+        .section { padding: 56px 20px; }
+        .section-label { grid-template-columns: auto auto; justify-content: center; gap: 8px 10px; padding: 0; text-align: center; }
+        .section-label span:first-child { font-size: clamp(3rem, 14vw, 5.2rem); }
+        .section-label span:not(:only-child):last-child { grid-column: 1 / -1; justify-self: center; padding-bottom: 0; font-size: .72rem; }
+        .section-heading { max-width: 340px; margin: 16px auto 0; font-size: .8rem; text-align: center; }
+        .programme-intro { align-items: center; gap: 18px; margin-top: 22px; text-align: center; }
+        .programme-intro p { margin-inline: auto; font-size: 1.04rem; line-height: 1.62; }
+        .programme-hours { margin-top: 30px; }
+        .programme-hours > p { margin-bottom: 14px; font-size: 1.08rem; text-align: right; }
+        .programme-hours-grid { border-left: 0; text-align: right; }
+        .programme-hour { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; column-gap: 16px; row-gap: 6px; min-height: 0; padding: 22px 0; border-right: 0; }
+        .programme-hour > span { grid-column: 1; grid-row: 1; font-size: .98rem; text-align: left; }
+        .programme-hour strong { grid-column: 2; grid-row: 1; margin-top: 0; font-size: clamp(2.5rem, 10.5vw, 3.2rem); text-align: right; }
+        .programme-hour small { grid-column: 2; grid-row: 2; max-width: 240px; margin-top: 0; font-size: .93rem; line-height: 1.42; text-align: right; }
+        .programme-days-wrap { margin-top: 36px; }
+        .programme-day { min-height: 292px; padding: 18px; align-items: center; text-align: center; }
+        .day-placeholder { margin: 16px auto 0; font-size: .73rem; }
+        .day-open { margin-top: 16px; font-size: .72rem; }
+        .market-intro { margin: 24px auto 0; font-size: 1.05rem; line-height: 1.64; text-align: center; }
+        .market-hours { grid-template-columns: 1fr; gap: 8px; margin: 22px auto 0; padding: 14px 0; text-align: center; }
+        .market-hours > span, .market-hours small { font-size: .78rem; }
+        .market-hours strong { font-size: 2rem; text-align: center; }
+        .market-hours small { grid-column: auto; line-height: 1.42; }
+        .market-cta { display: flex; width: fit-content; margin: 22px auto 0; padding: 16px 20px; font-size: .75rem; }
+        .market-directory { margin-top: 38px; }
+        .market-filters { padding: 11px 0; }
+        .market-filter { min-height: 43px; font-size: .7rem; }
+        .market-slider { margin-top: 18px; }
+        .market-slider-control, .market-logo-card { min-height: 230px; }
+        .food-copy { padding: 56px 20px 52px; text-align: center; }
+        .food-copy .section-label, .food-copy .section-heading { margin-inline: auto; }
+        .food-copy p { margin: 22px auto 0; font-size: 1.05rem; line-height: 1.64; }
+        .food-schedule { margin: 28px auto 0; }
+        .schedule-row { grid-template-columns: 1fr; justify-items: center; row-gap: 8px; padding: 16px 0; text-align: center; }
+        .schedule-row > span, .schedule-row small { font-size: .78rem; }
+        .schedule-row strong { font-size: 2rem; text-align: center; }
+        .schedule-row small { grid-column: auto; line-height: 1.42; }
+        .food-image { min-height: 360px; }
+        .collaborate { padding-block: 40px; }
+        .collaborate .section-content { gap: 24px; }
+        .collaborate .section-label, .logo-tier-heading { align-items: center; text-align: center; }
+        .logo-tier { margin-top: 22px; }
+        .logo-tier + .logo-tier { margin-top: 18px; }
+        .organizer-block { justify-items: center; gap: 12px; margin-top: 22px; padding-top: 18px; }
+        .collaborate-media-slot { min-height: 230px; }
+        .contact-top, .contact-grid, .contact-cell { text-align: center; }
+        .contact-grid { margin-top: 38px; }
+        .contact-cell, .contact-cell:not(:first-child) { padding: 21px 0; }
+        .contact-cell > span { font-size: .75rem; }
+        .contact-cell strong { margin: 16px auto 0; }
+        .contact-cell p { margin: 12px auto 0; font-size: .95rem; line-height: 1.56; }
+        .contact-cta { margin-top: 14px; font-size: .75rem; }
+        .footer { width: 100%; align-items: center; gap: 20px; margin-top: 52px; text-align: center; }
+        .footer .brand { align-items: center; }
+        .footer-brand-logo { width: min(48vw, 180px); }
+        .footer-details { justify-items: center; }
+        .footer-note { text-align: center; font-size: .68rem; }
+        .legal-links { justify-content: center; gap: 12px; }
+        .legal-link { font-size: .67rem; }
+        .legal-modal { padding: 16px; }
+        .legal-modal-panel { max-height: calc(100svh - 32px); padding: 64px 24px 30px; }
+        .legal-document h2 { font-size: clamp(3.5rem, 16vw, 5rem); }
+        .legal-document p { margin-top: 19px; font-size: 1rem; line-height: 1.65; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="BEEFEATER XMAS MARKET"><img class="header-brand-logo" src="assets/logoxmasmarket.png" alt="" /></a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#inicio" data-i18n="nav-home">Inicio</a>
+        <a href="#programa" data-i18n="nav-programme">Programa</a>
+        <a href="#market" data-i18n="nav-market">Market</a>
+        <a href="#foodtruck">Foodtruck</a>
+        <a href="#contacto" data-i18n="nav-contact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switcher language-switcher--desktop" aria-label="Selector de idioma">
+          <button class="active" type="button" data-language="es" aria-pressed="true">ES <span aria-hidden="true">🇪🇸</span></button>
+          <button type="button" data-language="de" aria-pressed="false">DE <span aria-hidden="true">🇩🇪</span></button>
+          <button type="button" data-language="en" aria-pressed="false">EN <span aria-hidden="true">🇬🇧</span></button>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span aria-hidden="true">☰</span></button>
+        <div class="language-switcher language-switcher--mobile" aria-label="Selector de idioma">
+          <button class="active" type="button" data-language="es" aria-pressed="true">ES <span aria-hidden="true">🇪🇸</span></button>
+          <button type="button" data-language="de" aria-pressed="false">DE <span aria-hidden="true">🇩🇪</span></button>
+          <button type="button" data-language="en" aria-pressed="false">EN <span aria-hidden="true">🇬🇧</span></button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Navegación móvil" aria-hidden="true">
+      <button class="mobile-nav-close" type="button" aria-label="Cerrar menú">×</button>
+      <a href="#inicio" data-i18n="nav-home">Inicio</a>
+      <a href="#programa" data-i18n="nav-programme">Programa</a>
+      <a href="#market" data-i18n="nav-market">Market</a>
+      <a href="#foodtruck">Foodtruck</a>
+      <a href="#contacto" data-i18n="nav-contact">Contacto</a>
+    </nav>
+
+    <main>
+      <section class="hero" id="inicio" aria-label="Inicio">
+        <div class="hero-slides" aria-hidden="true">
+          <div class="hero-slide active"></div>
+          <div class="hero-slide"></div>
+          <div class="hero-slide"></div>
+        </div>
+        <div class="hero-content hero-content--brand">
+          <p class="eyebrow" data-i18n="hero-eyebrow">Faro de Maspalomas · Gran Canaria</p>
+          <h1 class="hero-brand-title"><img class="hero-brand-mark" src="assets/logosxmasmarketcenter.png" alt="BEEFEATER XMAS MARKET 2026" /></h1>
+          <div class="hero-event-date" aria-label="4, 5, 6, 7 y 8 de diciembre de 2026"><span data-i18n="hero-date-month">DICIEMBRE DE 2026</span><strong>4, 5, 6, 7 y 8</strong></div>
+        </div>
+        <div class="hero-bottom">
+          <p class="hero-description" data-i18n="hero-copy">Una nueva forma de vivir la Navidad. Muy pronto en el Faro de Maspalomas.</p>
+          <div class="hero-meta"><small data-i18n="hero-meta-label">Próximamente</small><span data-i18n="hero-meta">Faro de Maspalomas</span></div>
+        </div>
+        <div class="slide-controls" aria-label="Galería principal">
+          <button class="slide-dot active" type="button" aria-label="Ver imagen 1" aria-pressed="true"></button>
+          <button class="slide-dot" type="button" aria-label="Ver imagen 2" aria-pressed="false"></button>
+          <button class="slide-dot" type="button" aria-label="Ver imagen 3" aria-pressed="false"></button>
+        </div>
+        <div class="scroll-label" data-i18n="scroll">Desliza para descubrir</div>
+      </section>
+
+      <section class="section programme" id="programa">
+        <div class="section-content">
+        <div class="section-label"><span data-i18n="programme-label">Programa</span><span>2026</span></div>
+        <h2 class="section-heading" data-i18n="programme-title">Días para recordar.</h2>
+        <div class="programme-intro">
+          <p data-i18n="programme-copy">El cartel completo llegará más adelante. Por ahora, reserva un hueco para una Navidad que se vive fuera de casa.</p>
+          <div class="programme-note" data-i18n="programme-note">El programa se anunciará pronto.</div>
+        </div>
+        <div class="programme-hours">
+          <p data-i18n="general-hours-title">Horarios generales</p>
+          <div class="programme-hours-grid">
+            <div class="programme-hour"><span data-i18n="schedule-market-label">Horario Market</span><strong>10:00 - 22:00</strong><small data-i18n="schedule-market-days">De viernes a martes</small></div>
+            <div class="programme-hour"><span data-i18n="schedule-leisure-label">Horario Zona Ocio</span><strong>17:00 - 2:00</strong><small data-i18n="schedule-leisure-days">De viernes a lunes · el martes hasta las 22:00</small></div>
+            <div class="programme-hour"><span data-i18n="schedule-food-label">Horario Foodtruck</span><strong>12:00 - 2:00</strong><small data-i18n="schedule-food-days">De viernes a lunes · el martes hasta las 22:00</small></div>
+          </div>
+        </div>
+        <div class="programme-days-wrap">
+          <div class="programme-days" aria-label="Programa del 4 al 8 de diciembre">
+            <button class="programme-day" type="button" data-day-key="day-four" data-date="04" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">04</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-five" data-date="05" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">05</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-six" data-date="06" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">06</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-seven" data-date="07" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">07</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-eight" data-date="08" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">08</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+          </div>
+          <button class="programme-scroll-next" type="button" data-programme-scroll aria-label="Ver más días">→</button>
+        </div>
+        </div>
+      </section>
+
+      <section class="section market" id="market">
+        <div class="section-content">
+        <div class="section-label"><span data-i18n="market-label">Market</span></div>
+        <h2 class="section-heading" data-i18n="market-title">UN XMAS MARKET ÚNICO</h2>
+        <p class="market-intro" data-i18n="market-copy">Puestos cuidados, detalles para regalar y marcas con algo que contar. La selección 2026 se desvelará muy pronto.</p>
+        <div class="market-hours"><span data-i18n="schedule-market-label">Horario Market</span><strong>10:00 - 22:00</strong><small data-i18n="schedule-market-days">De viernes a martes</small></div>
+        <button class="market-cta" type="button" data-participation-open data-i18n="market-cta">QUIERO PARTICIPAR CON MI PUESTO</button>
+        <div class="market-directory">
+          <div class="market-filters" aria-label="Filtros de puestos">
+            <button class="market-filter active" type="button" data-market-filter="accessories" aria-pressed="true" data-i18n="market-filter-accessories">Accesorios y complementos</button>
+            <button class="market-filter" type="button" data-market-filter="fashion" aria-pressed="false" data-i18n="market-filter-fashion">Moda</button>
+            <button class="market-filter" type="button" data-market-filter="gastronomy" aria-pressed="false" data-i18n="market-filter-gastronomy">Gastronomía</button>
+            <button class="market-filter" type="button" data-market-filter="craft" aria-pressed="false" data-i18n="market-filter-craft">Artesanía</button>
+            <button class="market-filter" type="button" data-market-filter="art" aria-pressed="false" data-i18n="market-filter-art">Arte</button>
+            <button class="market-filter" type="button" data-market-filter="gifts" aria-pressed="false" data-i18n="market-filter-gifts">Regalos</button>
+          </div>
+          <div class="market-slider">
+            <button class="market-slider-control" type="button" data-market-slider-prev aria-label="Ver logos anteriores">←</button>
+            <div class="market-logo-viewport" tabindex="0" aria-live="polite">
+              <div class="market-logo-track" data-market-logo-track>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 01"><span>MARKET</span><strong>01</strong></article>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 02"><span>MARKET</span><strong>02</strong></article>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 03"><span>MARKET</span><strong>03</strong></article>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 04"><span>MARKET</span><strong>04</strong></article>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 05"><span>MARKET</span><strong>05</strong></article>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 06"><span>MARKET</span><strong>06</strong></article>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 07"><span>MARKET</span><strong>07</strong></article>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 08"><span>MARKET</span><strong>08</strong></article>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 09"><span>MARKET</span><strong>09</strong></article>
+                <article class="market-logo-card market-logo-card--generic" aria-label="Market 10"><span>MARKET</span><strong>10</strong></article>
+              </div>
+            </div>
+            <button class="market-slider-control" type="button" data-market-slider-next aria-label="Ver más logos">→</button>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="food" id="foodtruck">
+        <div class="food-layout">
+          <div class="food-copy">
+            <div class="section-label"><span>Foodtruck</span></div>
+            <h2 class="section-heading" data-i18n="food-title">Sabor de mercado</h2>
+            <p data-i18n="food-copy">Bocados que apetece probar, mesas para quedarse y ese brindis que abre la noche. El recorrido gastronómico se anunciará próximamente.</p>
+            <div class="food-schedule" aria-label="Horario Foodtruck">
+              <div class="schedule-row"><span data-i18n="schedule-food-label">Horario Foodtruck</span><strong>12:00 - 2:00</strong><small data-i18n="schedule-food-days">De viernes a lunes · el martes hasta las 22:00</small></div>
+            </div>
+          </div>
+          <div class="food-image"><img src="assets/market-foodtrucks.png" alt="Mercado navideño nocturno con puestos gastronómicos" /></div>
+        </div>
+      </section>
+
+      <section class="section collaborate" id="colabora">
+        <div class="section-content">
+        <div class="collaborate-main">
+        <div class="logo-tier">
+          <div class="logo-tier-heading"><h2 data-i18n="sponsor-title">Patrocina</h2></div>
+          <div class="logo-window" aria-label="Marcas patrocinadoras">
+            <div class="logo-track">
+              <div class="logo-item logo-item--sponsor"><img class="logo-image" src="assets/logos/PATROCINA/1Beefeaterlondon.png" alt="Beefeater London" /></div>
+              <div class="logo-item logo-item--sponsor"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/2sbt-maspalomas.png" alt="Ayuntamiento de San Bartolomé de Tirajana" /></div>
+              <div class="logo-item logo-item--sponsor" aria-hidden="true"><img class="logo-image" src="assets/logos/PATROCINA/1Beefeaterlondon.png" alt="" /></div>
+              <div class="logo-item logo-item--sponsor" aria-hidden="true"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/2sbt-maspalomas.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="logo-tier">
+          <div class="logo-tier-heading"><h2 data-i18n="collaborator-title">Colabora</h2></div>
+          <div class="logo-window" aria-label="Marcas colaboradoras">
+            <div class="logo-track logo-track--collaborators">
+              <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/MAHOU.png" alt="Mahou" /></div>
+              <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/APERITIVOS.png" alt="Aperitivos Snack" /></div>
+              <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/VIAJESCANARIAS.png" alt="Viajes Canarias Europa" /></div>
+              <div class="logo-item logo-item--collaborator" aria-hidden="true"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/MAHOU.png" alt="" /></div>
+              <div class="logo-item logo-item--collaborator" aria-hidden="true"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/APERITIVOS.png" alt="" /></div>
+              <div class="logo-item logo-item--collaborator" aria-hidden="true"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/VIAJESCANARIAS.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="organizer-block">
+          <div class="logo-tier-heading"><h2 data-i18n="organizer-title">Organiza</h2></div>
+          <div class="organizer-logos" aria-label="Organiza">
+            <img class="organizer-logo organizer-logo--inner" src="assets/logos/ORGANIZA/1inner.png" alt="Inner Market" />
+            <img class="organizer-logo organizer-logo--guapos" src="assets/logos/ORGANIZA/0guapos.png" alt="Guap@s" />
+            <img class="organizer-logo organizer-logo--discordia" src="assets/logos/ORGANIZA/2discordia.png" alt="Discordia" />
+          </div>
+        </div>
+        </div>
+        <aside class="collaborate-media" aria-hidden="true">
+          <!-- Sustituir este bloque por la imagen del evento cuando esté disponible. -->
+          <div class="collaborate-media-slot" data-event-image-slot><span data-i18n="collab-image-placeholder">Imagen del evento</span></div>
+        </aside>
+        </div>
+      </section>
+
+      <section class="section contact" id="contacto">
+        <div class="section-content">
+        <div class="contact-top">
+          <div><div class="section-label"><span data-i18n="contact-label">Contacto</span><span>2026</span></div><h2 class="section-heading" data-i18n="contact-title">NOS VEMOS PRONTO</h2></div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-cell"><span data-i18n="contact-place-label">Lugar</span><strong data-i18n="contact-place">Faro de Maspalomas, Gran Canaria</strong></div>
+          <div class="contact-cell"><span data-i18n="contact-date-label">Edición</span><strong data-i18n="contact-date">XMAS 2026</strong><p data-i18n="contact-date-copy">Del 4 al 8 de diciembre.</p></div>
+          <div class="contact-cell"><span data-i18n="contact-info-label">Información</span><strong data-i18n="contact-info">Muy pronto</strong><p data-i18n="contact-info-copy">Estamos preparando todos los detalles.</p><a class="contact-cta" href="#inicio" data-i18n="contact-cta">Volver al inicio ↑</a></div>
+        </div>
+        <footer class="footer">
+          <a class="footer-brand-logo" href="#inicio" aria-label="BEEFEATER XMAS MARKET"><img src="assets/logoxmasmarket.png" alt="BEEFEATER XMAS MARKET" /></a>
+          <div class="footer-details">
+            <p class="footer-note" data-i18n="footer">BEEFEATER XMAS MARKET 2026 — MASPALOMAS<br />Toda la información está sujeta a confirmación.</p>
+            <div class="legal-links" aria-label="Información legal" data-i18n-aria="legal-links-label">
+              <button class="legal-link" type="button" data-legal-open="notice" data-i18n="legal-link-notice">Aviso legal</button>
+              <button class="legal-link" type="button" data-legal-open="privacy" data-i18n="legal-link-privacy">Política de privacidad</button>
+            </div>
+          </div>
+        </footer>
+        </div>
+      </section>
+    </main>
+
+    <div class="programme-modal" id="programme-modal" hidden role="dialog" aria-modal="true" aria-labelledby="programme-modal-title">
+      <div class="programme-modal-backdrop" data-modal-close></div>
+      <div class="programme-modal-panel" tabindex="-1">
+        <button class="programme-modal-close" type="button" data-modal-close aria-label="Cerrar detalle">×</button>
+        <p class="programme-modal-label" id="programme-modal-label">Detalle del día</p>
+        <h2 id="programme-modal-title">Viernes 04</h2>
+        <p class="programme-modal-copy" id="programme-modal-copy">El programa detallado de este día se anunciará próximamente.</p>
+      </div>
+    </div>
+
+    <div class="participation-modal" id="participation-modal" hidden role="dialog" aria-modal="true" aria-labelledby="participation-title">
+      <div class="participation-modal-backdrop" data-participation-close></div>
+      <div class="participation-panel" tabindex="-1">
+        <button class="participation-close" type="button" data-participation-close aria-label="Cerrar formulario">×</button>
+        <p class="participation-kicker" data-i18n="participation-kicker">Participa</p>
+        <h2 id="participation-title" data-i18n="participation-title">Tu puesto en el market.</h2>
+        <p class="participation-copy" data-i18n="participation-copy">Déjanos estos datos para preparar tu solicitud de participación.</p>
+        <form class="participation-form" id="participation-form">
+          <label class="participation-field"><span data-i18n="participation-name">Nombre</span><input type="text" name="name" autocomplete="name" required /></label>
+          <label class="participation-field"><span data-i18n="participation-email">Email</span><input type="email" name="email" autocomplete="email" required /></label>
+          <label class="participation-field participation-field--wide"><span data-i18n="participation-brand">Marca o proyecto</span><input type="text" name="brand" required /></label>
+          <label class="participation-field participation-field--wide"><span data-i18n="participation-category">Categoría</span><select name="category" required><option value="" selected disabled data-i18n="participation-category-placeholder">Elige una categoría</option><option value="design" data-i18n="participation-category-design">Diseño y artesanía</option><option value="food" data-i18n="participation-category-food">Gastronomía</option><option value="other" data-i18n="participation-category-other">Otra</option></select></label>
+          <button class="participation-submit" type="submit" data-i18n="participation-submit">Enviar solicitud</button>
+          <p class="participation-status" role="status" data-i18n="participation-status">El formulario definitivo estará disponible próximamente; por ahora no se enviará ningún dato.</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="legal-modal" id="legal-modal" hidden role="dialog" aria-modal="true" aria-labelledby="legal-notice-title">
+      <div class="legal-modal-backdrop" data-legal-close></div>
+      <div class="legal-modal-panel" tabindex="-1">
+        <button class="legal-modal-close" type="button" data-legal-close aria-label="Cerrar">×</button>
+        <article class="legal-document" data-legal-document="notice">
+          <p class="legal-document-kicker" data-i18n="legal-notice-kicker">Información legal</p>
+          <h2 id="legal-notice-title" data-i18n="legal-notice-title">Aviso legal</h2>
+          <p data-i18n="legal-notice-owner"><strong>Titularidad del sitio.</strong> El presente sitio es titularidad de GUAPOS MODA Y EVENTOS SLU, con NIF B76233782 y domicilio fiscal en C/ Monseñor Oscar Romero 4, Telde (en adelante, “GUAPOS”).</p>
+          <p data-i18n="legal-notice-purpose"><strong>Objeto.</strong> Este sitio informa sobre BEEFEATER XMAS MARKET 2026, cuya celebración está prevista en San Bartolomé de Tirajana en las fechas anunciadas para el evento.</p>
+          <p data-i18n="legal-notice-marks"><strong>Marcas y derechos.</strong> GUAPOS no es titular ni propietaria de las marcas registradas Beefeater Gin, Beefeater Xmas Market ni de otros signos, denominaciones o elementos relacionados con ellas. GUAPOS actúa exclusivamente como concesionaria de la licencia para la realización de BEEFEATER XMAS MARKET 2026 en San Bartolomé de Tirajana durante las fechas previstas del evento.</p>
+          <p data-i18n="legal-notice-updates"><strong>Actualizaciones.</strong> Las fechas, contenidos y programación están sujetos a confirmación y podrán ser modificados.</p>
+        </article>
+        <article class="legal-document" data-legal-document="privacy" hidden>
+          <p class="legal-document-kicker" data-i18n="legal-privacy-kicker">Protección de datos</p>
+          <h2 id="legal-privacy-title" data-i18n="legal-privacy-title">Política de privacidad</h2>
+          <p data-i18n="legal-privacy-controller"><strong>Responsable.</strong> GUAPOS MODA Y EVENTOS SLU, con NIF B76233782 y domicilio fiscal en C/ Monseñor Oscar Romero 4, Telde, es el responsable del tratamiento cuando se recojan datos personales a través de este sitio.</p>
+          <p data-i18n="legal-privacy-current"><strong>Tratamiento actual.</strong> En la fase actual, la web no dispone de formularios que envíen información. El formulario de participación es demostrativo y no transmite ni registra los datos introducidos.</p>
+          <p data-i18n="legal-privacy-future"><strong>Activación futura.</strong> Antes de activar cualquier formulario operativo o tratamiento adicional, se incorporará la información específica sobre finalidad, base jurídica, conservación, destinatarios y ejercicio de derechos que corresponda.</p>
+          <p data-i18n="legal-privacy-rights"><strong>Derechos.</strong> Cuando se realice un tratamiento de datos personales, se podrán ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad mediante escrito dirigido al domicilio fiscal indicado. El canal electrónico aplicable se informará al activar formularios operativos.</p>
+        </article>
+      </div>
+    </div>
+
+    <script>
+      const translations = {
+        es: {
+          'nav-home':'Inicio','nav-programme':'Programa','nav-market':'Market','nav-contact':'Contacto',
+          'hero-eyebrow':'Faro de Maspalomas · Gran Canaria','hero-date-month':'DICIEMBRE DE 2026','hero-copy':'Una nueva forma de vivir la Navidad. Muy pronto en el Faro de Maspalomas.','hero-meta-label':'Próximamente','hero-meta':'Faro de Maspalomas','scroll':'Desliza para descubrir',
+          'programme-label':'Programa','programme-title':'Días para recordar.','programme-copy':'El cartel completo llegará más adelante. Por ahora, reserva un hueco para una Navidad que se vive fuera de casa.','programme-note':'El programa se anunciará pronto.','general-hours-title':'Horarios generales','day-four':'Viernes','day-five':'Sábado','day-six':'Domingo','day-seven':'Lunes','day-eight':'Martes','day-placeholder':'Programa próximamente','day-open':'Ver detalle →','programme-scroll-label':'Ver más días','modal-detail-label':'Detalle del día','modal-detail-copy':'El programa detallado de este día se anunciará próximamente. Vuelve pronto para descubrirlo.','modal-close':'Cerrar detalle',
+          'market-label':'Market','market-side':'Hallazgos con historia','market-title':'UN XMAS MARKET ÚNICO','market-copy':'Puestos cuidados, detalles para regalar y marcas con algo que contar. La selección 2026 se desvelará muy pronto.','market-cta':'QUIERO PARTICIPAR CON MI PUESTO','market-filter-accessories':'Accesorios y complementos','market-filter-fashion':'Moda','market-filter-gastronomy':'Gastronomía','market-filter-craft':'Artesanía','market-filter-art':'Arte','market-filter-gifts':'Regalos','market-slider-prev':'Ver logos anteriores','market-slider-next':'Ver más logos',
+          'participation-kicker':'Participa','participation-title':'Tu puesto en el market.','participation-copy':'Déjanos estos datos para preparar tu solicitud de participación.','participation-name':'Nombre','participation-email':'Email','participation-brand':'Marca o proyecto','participation-category':'Categoría','participation-category-placeholder':'Elige una categoría','participation-category-design':'Diseño y artesanía','participation-category-food':'Gastronomía','participation-category-other':'Otra','participation-submit':'Enviar solicitud','participation-status':'El formulario definitivo estará disponible próximamente; por ahora no se enviará ningún dato.','participation-close':'Cerrar formulario',
+          'food-side':'Sabor de mercado','food-title':'Sabor de mercado','food-copy':'Bocados que apetece probar, mesas para quedarse y ese brindis que abre la noche. El recorrido gastronómico se anunciará próximamente.','schedule-market-label':'Horario Market','schedule-market-days':'De viernes a martes','schedule-leisure-label':'Horario Zona Ocio','schedule-leisure-days':'De viernes a lunes · el martes hasta las 22:00','schedule-food-label':'Horario Foodtruck','schedule-food-days':'De viernes a lunes · el martes hasta las 22:00',
+          'collab-label':'Participan','collab-image-placeholder':'Imagen del evento','sponsor-title':'Patrocina','collaborator-title':'Colabora','organizer-title':'Organiza',
+          'contact-label':'Contacto','contact-title':'NOS VEMOS PRONTO','contact-copy':'Aquí encontrarás todas las novedades de BEEFEATER XMAS MARKET 2026 — MASPALOMAS.','contact-place-label':'Lugar','contact-place':'Faro de Maspalomas, Gran Canaria','contact-place-copy':'El punto de encuentro será Faro de Maspalomas.','contact-date-label':'Edición','contact-date':'XMAS 2026','contact-date-copy':'Del 4 al 8 de diciembre.','contact-info-label':'Información','contact-info':'Muy pronto','contact-info-copy':'Estamos preparando todos los detalles.','contact-cta':'Volver al inicio ↑','footer':'BEEFEATER XMAS MARKET 2026 — MASPALOMAS<br>Toda la información está sujeta a confirmación.',
+          'legal-links-label':'Información legal','legal-link-notice':'Aviso legal','legal-link-privacy':'Política de privacidad','legal-close':'Cerrar','legal-notice-kicker':'Información legal','legal-notice-title':'Aviso legal','legal-notice-owner':'<strong>Titularidad del sitio.</strong> El presente sitio es titularidad de GUAPOS MODA Y EVENTOS SLU, con NIF B76233782 y domicilio fiscal en C/ Monseñor Oscar Romero 4, Telde (en adelante, “GUAPOS”).','legal-notice-purpose':'<strong>Objeto.</strong> Este sitio informa sobre BEEFEATER XMAS MARKET 2026, cuya celebración está prevista en San Bartolomé de Tirajana en las fechas anunciadas para el evento.','legal-notice-marks':'<strong>Marcas y derechos.</strong> GUAPOS no es titular ni propietaria de la marca registrada Beefeater Gin, de Beefeater Xmas Market ni de otros signos, denominaciones o elementos relacionados con ellas. GUAPOS actúa exclusivamente como concesionaria de la licencia para la realización de BEEFEATER XMAS MARKET 2026 en San Bartolomé de Tirajana durante las fechas previstas del evento.','legal-notice-updates':'<strong>Actualizaciones.</strong> Las fechas, contenidos y programación están sujetos a confirmación y podrán ser modificados.','legal-privacy-kicker':'Protección de datos','legal-privacy-title':'Política de privacidad','legal-privacy-controller':'<strong>Responsable.</strong> GUAPOS MODA Y EVENTOS SLU, con NIF B76233782 y domicilio fiscal en C/ Monseñor Oscar Romero 4, Telde, es el responsable del tratamiento cuando se recojan datos personales a través de este sitio.','legal-privacy-current':'<strong>Tratamiento actual.</strong> En la fase actual, la web no dispone de formularios que envíen información. El formulario de participación es demostrativo y no transmite ni registra los datos introducidos.','legal-privacy-future':'<strong>Activación futura.</strong> Antes de activar cualquier formulario operativo o tratamiento adicional, se incorporará la información específica sobre finalidad, base jurídica, conservación, destinatarios y ejercicio de derechos que corresponda.','legal-privacy-rights':'<strong>Derechos.</strong> Cuando se realice un tratamiento de datos personales, se podrán ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad mediante escrito dirigido al domicilio fiscal indicado. El canal electrónico aplicable se informará al activar formularios operativos.'
+        },
+        de: {
+          'nav-home':'Startseite','nav-programme':'Programm','nav-market':'Market','nav-contact':'Kontakt',
+          'hero-eyebrow':'Faro de Maspalomas · Gran Canaria','hero-date-month':'DEZEMBER 2026','hero-copy':'Eine neue Art, Weihnachten zu erleben. Schon bald am Faro de Maspalomas.','hero-meta-label':'Demnächst','hero-meta':'Faro de Maspalomas','scroll':'Zum Entdecken scrollen',
+          'programme-label':'Programm','programme-title':'Tage, die in Erinnerung bleiben.','programme-copy':'Das vollständige Programm wird später bekannt gegeben. Reserviere dir schon jetzt Zeit für Weihnachten unter freiem Himmel.','programme-note':'Das Programm wird bald bekannt gegeben.','general-hours-title':'Allgemeine Öffnungszeiten','day-four':'Freitag','day-five':'Samstag','day-six':'Sonntag','day-seven':'Montag','day-eight':'Dienstag','day-placeholder':'Programm folgt in Kürze','day-open':'Details ansehen →','programme-scroll-label':'Weitere Tage ansehen','modal-detail-label':'Tagesdetails','modal-detail-copy':'Das detaillierte Programm für diesen Tag wird bald bekannt gegeben. Schau bald wieder vorbei.','modal-close':'Details schließen',
+          'market-label':'Market','market-side':'Fundstücke mit Geschichte','market-title':'EIN EINZIGARTIGER XMAS MARKET','market-copy':'Sorgfältig ausgewählte Stände, besondere Geschenkideen und Marken mit etwas zu erzählen. Die Auswahl für 2026 wird bald enthüllt.','market-cta':'ICH MÖCHTE MIT MEINEM STAND TEILNEHMEN','market-filter-accessories':'Accessoires und Ergänzungen','market-filter-fashion':'Mode','market-filter-gastronomy':'Gastronomie','market-filter-craft':'Kunsthandwerk','market-filter-art':'Kunst','market-filter-gifts':'Geschenke','market-slider-prev':'Vorherige Logos ansehen','market-slider-next':'Weitere Logos ansehen',
+          'participation-kicker':'Teilnehmen','participation-title':'Dein Stand im Market.','participation-copy':'Hinterlasse uns diese Angaben, damit wir deine Teilnahme vorbereiten können.','participation-name':'Name','participation-email':'E-Mail','participation-brand':'Marke oder Projekt','participation-category':'Kategorie','participation-category-placeholder':'Kategorie auswählen','participation-category-design':'Design und Kunsthandwerk','participation-category-food':'Gastronomie','participation-category-other':'Andere','participation-submit':'Anfrage senden','participation-status':'Das endgültige Formular wird bald verfügbar sein; derzeit werden keine Daten übermittelt.','participation-close':'Formular schließen',
+          'food-side':'Marktgenuss','food-title':'Marktgenuss','food-copy':'Kleine Köstlichkeiten, Tische zum Verweilen und der Toast, der die Nacht eröffnet. Das gastronomische Angebot wird bald bekannt gegeben.','schedule-market-label':'Market-Öffnungszeiten','schedule-market-days':'Freitag bis Dienstag','schedule-leisure-label':'Öffnungszeiten Freizeitbereich','schedule-leisure-days':'Freitag bis Montag · Dienstag bis 22:00 Uhr','schedule-food-label':'Foodtruck-Öffnungszeiten','schedule-food-days':'Freitag bis Montag · Dienstag bis 22:00 Uhr',
+          'collab-label':'Beteiligt','collab-image-placeholder':'Eventbild','sponsor-title':'Sponsoren','collaborator-title':'Kooperationspartner','organizer-title':'Veranstalter',
+          'contact-label':'Kontakt','contact-title':'WIR SEHEN UNS BALD','contact-copy':'Hier findest du alle Neuigkeiten zum BEEFEATER XMAS MARKET 2026 — MASPALOMAS.','contact-place-label':'Ort','contact-place':'Faro de Maspalomas, Gran Canaria','contact-place-copy':'Der Treffpunkt ist der Faro de Maspalomas.','contact-date-label':'Ausgabe','contact-date':'XMAS 2026','contact-date-copy':'4.–8. Dezember.','contact-info-label':'Information','contact-info':'Demnächst','contact-info-copy':'Wir bereiten alle Details vor.','contact-cta':'Zurück zum Anfang ↑','footer':'BEEFEATER XMAS MARKET 2026 — MASPALOMAS<br>Alle Angaben vorbehaltlich der Bestätigung.',
+          'legal-links-label':'Rechtliche Hinweise','legal-link-notice':'Impressum','legal-link-privacy':'Datenschutzerklärung','legal-close':'Schließen','legal-notice-kicker':'Rechtliche Hinweise','legal-notice-title':'Impressum','legal-notice-owner':'<strong>Betreiber der Website.</strong> Diese Website wird von GUAPOS MODA Y EVENTOS SLU, Steuernummer B76233782, mit Sitz in C/ Monseñor Oscar Romero 4, Telde (nachfolgend „GUAPOS“) betrieben.','legal-notice-purpose':'<strong>Zweck.</strong> Diese Website informiert über den BEEFEATER XMAS MARKET 2026, dessen Durchführung in San Bartolomé de Tirajana zu den für die Veranstaltung angekündigten Terminen vorgesehen ist.','legal-notice-marks':'<strong>Marken und Rechte.</strong> GUAPOS ist weder Inhaber noch Eigentümer der eingetragenen Marke Beefeater Gin, von Beefeater Xmas Market oder anderer damit verbundener Zeichen, Namen oder Elemente. GUAPOS handelt ausschließlich als Lizenznehmer für die Durchführung des BEEFEATER XMAS MARKET 2026 in San Bartolomé de Tirajana während der vorgesehenen Veranstaltungstermine.','legal-notice-updates':'<strong>Aktualisierungen.</strong> Termine, Inhalte und Programm stehen unter Vorbehalt und können geändert werden.','legal-privacy-kicker':'Datenschutz','legal-privacy-title':'Datenschutzerklärung','legal-privacy-controller':'<strong>Verantwortlicher.</strong> GUAPOS MODA Y EVENTOS SLU, Steuernummer B76233782, mit Sitz in C/ Monseñor Oscar Romero 4, Telde, ist verantwortlich für die Verarbeitung personenbezogener Daten, sofern diese über diese Website erhoben werden.','legal-privacy-current':'<strong>Aktuelle Verarbeitung.</strong> In der aktuellen Phase verfügt die Website über keine Formulare, die Informationen übermitteln. Das Teilnahmeformular dient nur zur Demonstration und übermittelt oder speichert keine eingegebenen Daten.','legal-privacy-future':'<strong>Zukünftige Aktivierung.</strong> Vor der Aktivierung eines operativen Formulars oder einer weiteren Verarbeitung werden die spezifischen Informationen zu Zweck, Rechtsgrundlage, Aufbewahrung, Empfängern und Ausübung der Rechte bereitgestellt.','legal-privacy-rights':'<strong>Rechte.</strong> Bei der Verarbeitung personenbezogener Daten können die Rechte auf Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung und Datenübertragbarkeit schriftlich an die angegebene Geschäftsanschrift ausgeübt werden. Der jeweils geltende elektronische Kontaktweg wird bei Aktivierung operativer Formulare bekannt gegeben.'
+        },
+        en: {
+          'nav-home':'Home','nav-programme':'Programme','nav-market':'Market','nav-contact':'Contact',
+          'hero-eyebrow':'Faro de Maspalomas · Gran Canaria','hero-date-month':'DECEMBER 2026','hero-copy':'A new way to experience Christmas. Coming soon to Faro de Maspalomas.','hero-meta-label':'Coming soon','hero-meta':'Faro de Maspalomas','scroll':'Scroll to discover',
+          'programme-label':'Programme','programme-title':'Days to remember.','programme-copy':'The full line-up will be revealed later. For now, save space for a Christmas made to be experienced outdoors.','programme-note':'The programme will be announced soon.','general-hours-title':'General opening hours','day-four':'Friday','day-five':'Saturday','day-six':'Sunday','day-seven':'Monday','day-eight':'Tuesday','day-placeholder':'Programme coming soon','day-open':'View details →','programme-scroll-label':'See more days','modal-detail-label':'Day details','modal-detail-copy':'The detailed programme for this day will be announced soon. Please check back shortly.','modal-close':'Close details',
+          'market-label':'Market','market-side':'Finds with a story','market-title':'A UNIQUE XMAS MARKET','market-copy':'Thoughtful stalls, gifts to give and brands with something to say. The 2026 selection will be revealed soon.','market-cta':'I WANT A STALL AT THE MARKET','market-filter-accessories':'Accessories and add-ons','market-filter-fashion':'Fashion','market-filter-gastronomy':'Gastronomy','market-filter-craft':'Craftsmanship','market-filter-art':'Art','market-filter-gifts':'Gifts','market-slider-prev':'View previous logos','market-slider-next':'View more logos',
+          'participation-kicker':'Participate','participation-title':'Your stall at the market.','participation-copy':'Leave us these details so we can prepare your participation request.','participation-name':'Name','participation-email':'Email','participation-brand':'Brand or project','participation-category':'Category','participation-category-placeholder':'Choose a category','participation-category-design':'Design and crafts','participation-category-food':'Food','participation-category-other':'Other','participation-submit':'Send request','participation-status':'The final form will be available soon; no data will be sent yet.','participation-close':'Close form',
+          'food-side':'Market flavours','food-title':'Market flavours','food-copy':'Bites worth trying, tables worth staying at and that toast which starts the night. The food line-up will be announced soon.','schedule-market-label':'Market hours','schedule-market-days':'Friday to Tuesday','schedule-leisure-label':'Leisure area hours','schedule-leisure-days':'Friday to Monday · Tuesday until 22:00','schedule-food-label':'Food truck hours','schedule-food-days':'Friday to Monday · Tuesday until 22:00',
+          'collab-label':'Participating','collab-image-placeholder':'Event image','sponsor-title':'Sponsors','collaborator-title':'Collaborates','organizer-title':'Organises',
+          'contact-label':'Contact','contact-title':'SEE YOU SOON','contact-copy':'This is where you will find all the updates for BEEFEATER XMAS MARKET 2026 — MASPALOMAS.','contact-place-label':'Place','contact-place':'Faro de Maspalomas, Gran Canaria','contact-place-copy':'The meeting point will be Faro de Maspalomas.','contact-date-label':'Edition','contact-date':'XMAS 2026','contact-date-copy':'4–8 December.','contact-info-label':'Information','contact-info':'Coming soon','contact-info-copy':'We are getting every detail ready.','contact-cta':'Back to top ↑','footer':'BEEFEATER XMAS MARKET 2026 — MASPALOMAS<br>All information is subject to confirmation.',
+          'legal-links-label':'Legal information','legal-link-notice':'Legal notice','legal-link-privacy':'Privacy policy','legal-close':'Close','legal-notice-kicker':'Legal information','legal-notice-title':'Legal notice','legal-notice-owner':'<strong>Website ownership.</strong> This website is owned by GUAPOS MODA Y EVENTOS SLU, tax ID B76233782, with registered address at C/ Monseñor Oscar Romero 4, Telde (hereinafter, “GUAPOS”).','legal-notice-purpose':'<strong>Purpose.</strong> This website provides information about BEEFEATER XMAS MARKET 2026, planned to take place in San Bartolomé de Tirajana on the dates announced for the event.','legal-notice-marks':'<strong>Brands and rights.</strong> GUAPOS is not the owner or proprietor of the registered trademark Beefeater Gin, of Beefeater Xmas Market, or of any related signs, names or elements. GUAPOS acts solely as the licensee for BEEFEATER XMAS MARKET 2026 in San Bartolomé de Tirajana during the dates planned for the event.','legal-notice-updates':'<strong>Updates.</strong> Dates, content and programming are subject to confirmation and may change.','legal-privacy-kicker':'Data protection','legal-privacy-title':'Privacy policy','legal-privacy-controller':'<strong>Controller.</strong> GUAPOS MODA Y EVENTOS SLU, tax ID B76233782, with registered address at C/ Monseñor Oscar Romero 4, Telde, is the controller when personal data is collected through this website.','legal-privacy-current':'<strong>Current processing.</strong> At this stage, the website has no forms that send information. The participation form is demonstrative and does not transmit or record the data entered.','legal-privacy-future':'<strong>Future activation.</strong> Before any operational form or additional processing is enabled, the specific information on purpose, legal basis, retention, recipients and the exercise of rights will be provided.','legal-privacy-rights':'<strong>Rights.</strong> When personal data is processed, rights of access, rectification, erasure, objection, restriction and portability may be exercised by writing to the registered address indicated. The applicable electronic channel will be provided when operational forms are activated.'
+        }
+      };
+
+      const siteHeader = document.querySelector('.site-header');
+      const languageButtons = document.querySelectorAll('[data-language]');
+      const programmeDays = document.querySelector('.programme-days');
+      const programmeScrollNext = document.querySelector('[data-programme-scroll]');
+      const programmeModal = document.querySelector('#programme-modal');
+      const programmeModalPanel = programmeModal.querySelector('.programme-modal-panel');
+      const programmeModalLabel = document.querySelector('#programme-modal-label');
+      const programmeModalTitle = document.querySelector('#programme-modal-title');
+      const programmeModalCopy = document.querySelector('#programme-modal-copy');
+      const programmeModalClose = programmeModal.querySelector('.programme-modal-close');
+      const participationModal = document.querySelector('#participation-modal');
+      const participationPanel = participationModal.querySelector('.participation-panel');
+      const participationClose = participationModal.querySelector('.participation-close');
+      const participationStatus = participationModal.querySelector('.participation-status');
+      const participationForm = document.querySelector('#participation-form');
+      const legalModal = document.querySelector('#legal-modal');
+      const legalModalPanel = legalModal.querySelector('.legal-modal-panel');
+      const legalModalClose = legalModal.querySelector('.legal-modal-close');
+      const legalDocuments = legalModal.querySelectorAll('[data-legal-document]');
+      const marketFilterButtons = document.querySelectorAll('[data-market-filter]');
+      const marketLogoViewport = document.querySelector('.market-logo-viewport');
+      const marketLogoTrack = document.querySelector('[data-market-logo-track]');
+      const marketSlider = document.querySelector('.market-slider');
+      const marketSliderPrevious = document.querySelector('[data-market-slider-prev]');
+      const marketSliderNext = document.querySelector('[data-market-slider-next]');
+      const marketCategories = {
+        accessories: { folder: 'accesorios-complementos' },
+        fashion: { folder: 'moda' },
+        gastronomy: { folder: 'gastronomia' },
+        craft: { folder: 'artesania' },
+        art: { folder: 'arte' },
+        gifts: { folder: 'regalos' }
+      };
+      let currentLanguage = 'es';
+      let activeProgrammeDay = null;
+      let activeParticipationTrigger = null;
+      let activeLegalTrigger = null;
+      let activeMarketCategory = 'accessories';
+      let marketLogoRequest = 0;
+      let marketAutoplayTimer = null;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      function refreshHeaderState() {
+        siteHeader.classList.toggle('is-scrolled', window.scrollY > 28);
+      }
+      refreshHeaderState();
+      window.addEventListener('scroll', refreshHeaderState, { passive: true });
+
+      function refreshProgrammeModal() {
+        if (!activeProgrammeDay) return;
+        const copy = translations[currentLanguage];
+        programmeModalLabel.textContent = copy['modal-detail-label'];
+        programmeModalTitle.textContent = `${copy[activeProgrammeDay.dataset.dayKey]} ${activeProgrammeDay.dataset.date}`;
+        programmeModalCopy.textContent = copy['modal-detail-copy'];
+        programmeModalClose.setAttribute('aria-label', copy['modal-close']);
+      }
+      function openProgrammeModal(day) {
+        activeProgrammeDay = day;
+        refreshProgrammeModal();
+        programmeModal.hidden = false;
+        document.body.classList.add('modal-open');
+        programmeModalPanel.focus({ preventScroll: true });
+      }
+      function closeProgrammeModal() {
+        if (programmeModal.hidden) return;
+        programmeModal.hidden = true;
+        document.body.classList.remove('modal-open');
+        activeProgrammeDay?.focus({ preventScroll: true });
+      }
+      document.querySelectorAll('.programme-day').forEach((day) => day.addEventListener('click', () => openProgrammeModal(day)));
+      programmeScrollNext.addEventListener('click', () => {
+        const hasReachedEnd = programmeDays.scrollLeft + programmeDays.clientWidth >= programmeDays.scrollWidth - 4;
+        if (hasReachedEnd) programmeDays.scrollTo({ left: 0, behavior: 'smooth' });
+        else programmeDays.scrollBy({ left: Math.max(180, programmeDays.clientWidth * .72), behavior: 'smooth' });
+      });
+      programmeModal.querySelectorAll('[data-modal-close]').forEach((element) => element.addEventListener('click', closeProgrammeModal));
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeProgrammeModal(); });
+
+      function openParticipationForm(trigger) {
+        closeProgrammeModal();
+        activeParticipationTrigger = trigger;
+        participationStatus.textContent = translations[currentLanguage]['participation-status'];
+        participationModal.hidden = false;
+        document.body.classList.add('modal-open');
+        participationPanel.focus({ preventScroll: true });
+      }
+      function closeParticipationForm() {
+        if (participationModal.hidden) return;
+        participationModal.hidden = true;
+        document.body.classList.remove('modal-open');
+        activeParticipationTrigger?.focus({ preventScroll: true });
+      }
+      document.querySelectorAll('[data-participation-open]').forEach((trigger) => trigger.addEventListener('click', () => openParticipationForm(trigger)));
+      participationModal.querySelectorAll('[data-participation-close]').forEach((element) => element.addEventListener('click', closeParticipationForm));
+      participationForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        participationStatus.textContent = translations[currentLanguage]['participation-status'];
+      });
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeParticipationForm(); });
+
+      function openLegalModal(type, trigger) {
+        closeProgrammeModal();
+        closeParticipationForm();
+        activeLegalTrigger = trigger;
+        legalDocuments.forEach((legalDocument) => {
+          legalDocument.hidden = legalDocument.dataset.legalDocument !== type;
+        });
+        legalModal.setAttribute('aria-labelledby', type === 'privacy' ? 'legal-privacy-title' : 'legal-notice-title');
+        legalModal.hidden = false;
+        document.body.classList.add('modal-open');
+        legalModalPanel.focus({ preventScroll: true });
+      }
+      function closeLegalModal() {
+        if (legalModal.hidden) return;
+        legalModal.hidden = true;
+        document.body.classList.remove('modal-open');
+        activeLegalTrigger?.focus({ preventScroll: true });
+      }
+      document.querySelectorAll('[data-legal-open]').forEach((trigger) => trigger.addEventListener('click', () => openLegalModal(trigger.dataset.legalOpen, trigger)));
+      legalModal.querySelectorAll('[data-legal-close]').forEach((element) => element.addEventListener('click', closeLegalModal));
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeLegalModal(); });
+
+      function loadMarketLogo(path) {
+        return new Promise((resolve) => {
+          const image = new Image();
+          image.onload = () => resolve(path);
+          image.onerror = () => resolve(null);
+          image.src = path;
+        });
+      }
+      function createGenericMarketCard(index) {
+        const card = document.createElement('article');
+        const number = String(index).padStart(2, '0');
+        card.className = 'market-logo-card market-logo-card--generic';
+        card.setAttribute('aria-label', `Market ${number}`);
+        card.innerHTML = `<span>MARKET</span><strong>${number}</strong>`;
+        return card;
+      }
+      function renderMarketCards(logos) {
+        marketLogoTrack.replaceChildren();
+        if (!logos.length) {
+          Array.from({ length: 10 }, (_, index) => index + 1).forEach((index) => marketLogoTrack.append(createGenericMarketCard(index)));
+          return;
+        }
+        const categoryLabel = document.querySelector(`[data-market-filter="${activeMarketCategory}"]`).textContent.trim();
+        logos.forEach((source, index) => {
+          const card = document.createElement('article');
+          const image = document.createElement('img');
+          card.className = 'market-logo-card';
+          image.src = source;
+          image.alt = `${categoryLabel} ${index + 1}`;
+          card.append(image);
+          marketLogoTrack.append(card);
+        });
+      }
+      async function renderMarketLogos(category) {
+        const request = ++marketLogoRequest;
+        const { folder } = marketCategories[category];
+        const candidates = Array.from({ length: 12 }, (_, index) => {
+          const number = String(index + 1).padStart(2, '0');
+          return `assets/logos/MARKET/${folder}/${number}.png`;
+        });
+        const logos = (await Promise.all(candidates.map(loadMarketLogo))).filter(Boolean);
+        if (request !== marketLogoRequest || category !== activeMarketCategory) return;
+        renderMarketCards(logos);
+        marketLogoViewport.scrollTo({ left: 0, behavior: 'auto' });
+        restartMarketAutoplay();
+      }
+      function getMarketScrollStep() {
+        const card = marketLogoTrack.querySelector('.market-logo-card');
+        return card ? card.getBoundingClientRect().width + 1 : marketLogoViewport.clientWidth * .82;
+      }
+      function moveMarketSlider(direction = 1) {
+        const maximum = marketLogoViewport.scrollWidth - marketLogoViewport.clientWidth;
+        if (maximum <= 0) return;
+        const atStart = marketLogoViewport.scrollLeft <= 4;
+        const atEnd = marketLogoViewport.scrollLeft >= maximum - 4;
+        if (direction > 0 && atEnd) {
+          marketLogoViewport.scrollTo({ left: 0, behavior: 'smooth' });
+          return;
+        }
+        if (direction < 0 && atStart) {
+          marketLogoViewport.scrollTo({ left: maximum, behavior: 'smooth' });
+          return;
+        }
+        marketLogoViewport.scrollBy({ left: getMarketScrollStep() * direction, behavior: 'smooth' });
+      }
+      function stopMarketAutoplay() {
+        if (!marketAutoplayTimer) return;
+        window.clearInterval(marketAutoplayTimer);
+        marketAutoplayTimer = null;
+      }
+      function startMarketAutoplay() {
+        if (reducedMotion.matches || document.hidden || marketAutoplayTimer) return;
+        marketAutoplayTimer = window.setInterval(() => moveMarketSlider(1), 2800);
+      }
+      function restartMarketAutoplay() {
+        stopMarketAutoplay();
+        startMarketAutoplay();
+      }
+      marketFilterButtons.forEach((button) => button.addEventListener('click', () => {
+        activeMarketCategory = button.dataset.marketFilter;
+        marketFilterButtons.forEach((filter) => {
+          const selected = filter === button;
+          filter.classList.toggle('active', selected);
+          filter.setAttribute('aria-pressed', selected);
+        });
+        renderMarketLogos(activeMarketCategory);
+      }));
+      marketSliderPrevious.addEventListener('click', () => { moveMarketSlider(-1); restartMarketAutoplay(); });
+      marketSliderNext.addEventListener('click', () => { moveMarketSlider(1); restartMarketAutoplay(); });
+      marketSlider.addEventListener('pointerenter', stopMarketAutoplay);
+      marketSlider.addEventListener('pointerleave', startMarketAutoplay);
+      marketSlider.addEventListener('focusin', stopMarketAutoplay);
+      marketSlider.addEventListener('focusout', () => window.setTimeout(() => {
+        if (!marketSlider.contains(document.activeElement)) startMarketAutoplay();
+      }, 0));
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopMarketAutoplay();
+        else startMarketAutoplay();
+      });
+      reducedMotion.addEventListener('change', () => {
+        if (reducedMotion.matches) stopMarketAutoplay();
+        else startMarketAutoplay();
+      });
+
+      function setLanguage(language) {
+        currentLanguage = language;
+        document.documentElement.lang = language;
+        document.querySelectorAll('[data-i18n]').forEach((element) => {
+          const value = translations[language][element.dataset.i18n];
+          if (value) element.innerHTML = value;
+        });
+        document.querySelectorAll('[data-i18n-aria]').forEach((element) => {
+          const value = translations[language][element.dataset.i18nAria];
+          if (value) element.setAttribute('aria-label', value);
+        });
+        languageButtons.forEach((button) => {
+          const selected = button.dataset.language === language;
+          button.classList.toggle('active', selected);
+          button.setAttribute('aria-pressed', selected);
+        });
+        localStorage.setItem('xmas-market-language', language);
+        document.title = language === 'es' ? 'BEEFEATER XMAS MARKET 2026 — MASPALOMAS' : 'BEEFEATER XMAS MARKET 2026 — MASPALOMAS';
+        refreshProgrammeModal();
+        programmeScrollNext.setAttribute('aria-label', translations[language]['programme-scroll-label']);
+        participationClose.setAttribute('aria-label', translations[language]['participation-close']);
+        legalModalClose.setAttribute('aria-label', translations[language]['legal-close']);
+        participationStatus.textContent = translations[language]['participation-status'];
+        marketSliderPrevious.setAttribute('aria-label', translations[language]['market-slider-prev']);
+        marketSliderNext.setAttribute('aria-label', translations[language]['market-slider-next']);
+        renderMarketLogos(activeMarketCategory);
+      }
+      languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+      const storedLanguage = localStorage.getItem('xmas-market-language');
+      if (storedLanguage && translations[storedLanguage]) setLanguage(storedLanguage);
+      else setLanguage('es');
+
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.slide-dot');
+      let slideIndex = 0;
+      function showSlide(index) {
+        slideIndex = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === slideIndex));
+        dots.forEach((dot, i) => { dot.classList.toggle('active', i === slideIndex); dot.setAttribute('aria-pressed', i === slideIndex); });
+      }
+      dots.forEach((dot, index) => dot.addEventListener('click', () => showSlide(index)));
+      const carousel = window.matchMedia('(prefers-reduced-motion: no-preference)').matches ? setInterval(() => showSlide(slideIndex + 1), 6500) : null;
+      document.querySelector('.hero').addEventListener('mouseenter', () => { if (carousel) clearInterval(carousel); }, { once: true });
+
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mobileNav = document.querySelector('.mobile-nav');
+      const closeMenu = () => { mobileNav.classList.remove('open'); mobileNav.setAttribute('aria-hidden','true'); menuToggle.setAttribute('aria-expanded','false'); };
+      menuToggle.addEventListener('click', () => { const opened = mobileNav.classList.toggle('open'); mobileNav.setAttribute('aria-hidden', !opened); menuToggle.setAttribute('aria-expanded', opened); });
+      document.querySelector('.mobile-nav-close').addEventListener('click', closeMenu);
+      mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    </script>
+  </body>
+</html>
