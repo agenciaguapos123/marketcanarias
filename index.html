@@ -543,6 +543,12 @@
       .legal-document p { margin: 22px 0 0; font-size: .97rem; line-height: 1.72; }
       .legal-document strong { color: var(--red); font-weight: 600; }
 
+      @media (min-width: 1100px) {
+        .programme-day { padding: clamp(16px, 1.1vw, 22px); }
+        .day-placeholder--scheduled { font-size: clamp(2.5rem, 3.15vw, 4rem); }
+        .day-performer--long { font-size: clamp(1.8rem, 2.1vw, 2.7rem); }
+      }
+
       .mobile-nav { display: none; }
       @media (max-width: 760px) {
         .market { background-position: center, center, 54% center; background-size: cover; }
