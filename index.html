@@ -381,6 +381,11 @@
       .programme-modal-label { margin: 0; color: rgba(255,250,246,.78); font: .67rem var(--mono); letter-spacing: .13em; text-transform: uppercase; }
       .programme-modal h2 { max-width: 520px; margin: 28px 0 0; font: 600 clamp(4.3rem, 12vw, 7.8rem)/.69 var(--display); letter-spacing: -.02em; text-transform: uppercase; }
       .programme-modal-copy { max-width: 400px; margin: 31px 0 0; font-size: .98rem; line-height: 1.7; }
+      .programme-modal-schedule { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; }
+      .programme-modal-schedule li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: baseline; padding-bottom: 13px; border-bottom: 1px solid rgba(255,250,246,.42); }
+      .programme-modal-schedule strong { font: 600 clamp(1.6rem, 3vw, 2.45rem)/.82 var(--display); letter-spacing: -.01em; text-transform: uppercase; }
+      .programme-modal-schedule span { color: rgba(255,250,246,.78); font: .65rem var(--mono); letter-spacing: .05em; white-space: nowrap; }
+      .programme-modal-schedule .programme-slot--without-time { grid-template-columns: 1fr; }
       body.modal-open { overflow: hidden; }
 
       .market { background-color: var(--red); background-image: linear-gradient(105deg, rgba(222,0,45,.5) 0%, rgba(222,0,45,.18) 45%, rgba(126,0,30,.42) 100%), linear-gradient(0deg, rgba(113,0,28,.22), rgba(238,0,49,.03) 42%, rgba(113,0,28,.18)), url("assets/background2.png"); background-position: center, center, center; background-size: cover, cover, 100% auto; background-repeat: no-repeat; overflow: hidden; }
@@ -775,9 +780,9 @@
         </div>
         <div class="programme-days-wrap">
           <div class="programme-days" aria-label="Programa del 4 al 8 de diciembre">
-            <button class="programme-day" type="button" data-day-key="day-four" data-date="04" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">04</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-five" data-date="05" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">05</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-six" data-date="06" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">06</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-four" data-date="04" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">04</span></span><span><span class="day-rule"></span><span class="day-placeholder">Gerardo Quevedo<br />Jia Miles</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-five" data-date="05" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">05</span></span><span><span class="day-rule"></span><span class="day-placeholder">Kilian Viera</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-six" data-date="06" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">06</span></span><span><span class="day-rule"></span><span class="day-placeholder">Alberto Monterrey<br />DJ Estro</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
             <button class="programme-day" type="button" data-day-key="day-seven" data-date="07" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">07</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
             <button class="programme-day" type="button" data-day-key="day-eight" data-date="08" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">08</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
           </div>
@@ -911,7 +916,7 @@
         <button class="programme-modal-close" type="button" data-modal-close aria-label="Cerrar detalle">×</button>
         <p class="programme-modal-label" id="programme-modal-label">Detalle del día</p>
         <h2 id="programme-modal-title">Viernes 04</h2>
-        <p class="programme-modal-copy" id="programme-modal-copy">El programa detallado de este día se anunciará próximamente.</p>
+        <div class="programme-modal-copy" id="programme-modal-copy">El programa detallado de este día se anunciará próximamente.</div>
       </div>
     </div>
 
@@ -1033,6 +1038,19 @@
       let activeMarketCategory = 'accessories';
       let marketLogoRequest = 0;
       let marketAutoplayTimer = null;
+      const programmeDetails = {
+        'day-four': [
+          { artist: 'GERARDO QUEVEDO', time: '17:00 - 20:00' },
+          { artist: 'JIA MILES', time: '20:00 - 22:00' }
+        ],
+        'day-five': [
+          { artist: 'KILIAN VIERA', time: '19:00 - 20:30' }
+        ],
+        'day-six': [
+          { artist: 'ALBERTO MONTERREY' },
+          { artist: 'DJ ESTRO', time: '18:00 - 20:00' }
+        ]
+      };
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
       function refreshHeaderState() {
@@ -1046,7 +1064,28 @@
         const copy = translations[currentLanguage];
         programmeModalLabel.textContent = copy['modal-detail-label'];
         programmeModalTitle.textContent = `${copy[activeProgrammeDay.dataset.dayKey]} ${activeProgrammeDay.dataset.date}`;
-        programmeModalCopy.textContent = copy['modal-detail-copy'];
+        const details = programmeDetails[activeProgrammeDay.dataset.dayKey];
+        programmeModalCopy.replaceChildren();
+        if (!details) {
+          programmeModalCopy.textContent = copy['modal-detail-copy'];
+        } else {
+          const schedule = document.createElement('ul');
+          schedule.className = 'programme-modal-schedule';
+          details.forEach(({ artist, time }) => {
+            const slot = document.createElement('li');
+            if (!time) slot.className = 'programme-slot--without-time';
+            const performer = document.createElement('strong');
+            performer.textContent = artist;
+            slot.append(performer);
+            if (time) {
+              const scheduleTime = document.createElement('span');
+              scheduleTime.textContent = time;
+              slot.append(scheduleTime);
+            }
+            schedule.append(slot);
+          });
+          programmeModalCopy.append(schedule);
+        }
         programmeModalClose.setAttribute('aria-label', copy['modal-close']);
       }
       function openProgrammeModal(day) {
