@@ -516,6 +516,8 @@
       .footer-brand-logo img { display: block; width: 100%; height: auto; }
       .footer-details { display: grid; justify-items: end; gap: 10px; }
       .footer-note { margin: 0; color: rgba(255,250,246,.5); font: .58rem var(--mono); line-height: 1.6; letter-spacing: .04em; text-align: right; text-transform: uppercase; }
+      .footer-note a { color: inherit; border-bottom: 1px solid currentColor; text-decoration: none; }
+      .footer-note a:hover, .footer-note a:focus-visible { color: var(--cream); }
       .legal-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px; }
       .legal-link { padding: 0; color: rgba(255,250,246,.82); border: 0; border-bottom: 1px solid rgba(255,250,246,.44); background: transparent; font: .61rem/1.35 var(--mono); letter-spacing: .07em; text-transform: uppercase; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
       .legal-link:hover, .legal-link:focus-visible { color: var(--cream); border-color: var(--cream); }
@@ -892,7 +894,7 @@
         <footer class="footer">
           <a class="footer-brand-logo" href="#inicio" aria-label="BEEFEATER XMAS MARKET"><img src="assets/logoxmasmarket.png" alt="BEEFEATER XMAS MARKET" /></a>
           <div class="footer-details">
-            <p class="footer-note" data-i18n="footer">BEEFEATER XMAS MARKET 2026 — MASPALOMAS<br />Toda la información está sujeta a confirmación.</p>
+            <p class="footer-note">© 2026 <a href="https://bydiscordia.com/">Discordia</a></p>
             <div class="legal-links" aria-label="Información legal" data-i18n-aria="legal-links-label">
               <button class="legal-link" type="button" data-legal-open="notice" data-i18n="legal-link-notice">Aviso legal</button>
               <button class="legal-link" type="button" data-legal-open="privacy" data-i18n="legal-link-privacy">Política de privacidad</button>
