@@ -206,7 +206,7 @@
       .hero-slide:nth-child(2) { background-image: url("assets/market-artisans.png"); }
       .hero-slide:nth-child(3) { background-image: url("assets/market-foodtrucks.png"); }
       .hero-content { max-width: 950px; position: relative; }
-      .hero-content--brand { width: min(100%, 850px); margin-inline: auto; transform: translateY(-6vh); }
+      .hero-content--brand { width: min(100%, 1200px); margin-inline: auto; transform: translateY(-6vh); }
       .hero-content--brand .eyebrow { justify-content: center; }
       .eyebrow {
         display: flex;
@@ -220,8 +220,12 @@
         text-transform: uppercase;
       }
       .eyebrow::before, .eyebrow::after { content:""; flex: 0 0 26px; width: 26px; height: 1px; background: currentColor; }
-      .hero-brand-title { width: clamp(370px, 42vw, 650px); margin: 0 auto; }
+      .hero-brand-lockup { display: grid; grid-template-columns: minmax(110px, 1fr) minmax(370px, 650px) minmax(110px, 1fr); align-items: end; gap: clamp(8px, 1.5vw, 26px); width: 100%; margin: 0 auto; }
+      .hero-brand-title { grid-column: 2; width: 100%; margin: 0; }
       .hero-brand-mark { display: block; width: 100%; height: auto; }
+      .hero-yeoman { display: block; width: clamp(130px, 17vw, 250px); max-height: clamp(220px, 32vw, 365px); object-fit: contain; object-position: bottom center; }
+      .hero-yeoman--left { grid-column: 1; justify-self: end; }
+      .hero-yeoman--right { grid-column: 3; justify-self: start; transform: scaleX(-1); }
       .hero-event-date { margin: -10px auto 0; color: var(--cream); text-align: center; text-transform: uppercase; }
       .hero-event-date span { display: block; font: 600 clamp(1rem, 1.35vw, 1.4rem) var(--mono); letter-spacing: .22em; }
       .hero-event-date strong { display: block; margin-top: 8px; font: 600 clamp(2.7rem, 5vw, 5.2rem)/.76 var(--display); letter-spacing: .02em; white-space: nowrap; }
@@ -581,7 +585,10 @@
         .mobile-nav-close { position: absolute; top: 24px; right: 22px; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; color: var(--cream); background: none; font-size: 1.2rem; }
         .hero { min-height: 720px; height: 100svh; padding: 130px 20px 72px; }
         .hero-content--brand { transform: translateY(-4vh); }
+        .hero-brand-lockup { display: flex; flex-direction: column; align-items: center; gap: 12px; }
         .hero-brand-title { width: min(96vw, 440px); }
+        .hero-yeoman { width: clamp(112px, 34vw, 150px); max-height: 205px; }
+        .hero-yeoman--right { display: none; }
         .hero-event-date { margin-top: -8px; }
         .hero-event-date span { font-size: 1.08rem; }
         .hero-event-date strong { margin-top: 7px; font-size: clamp(2.55rem, 10.5vw, 3.6rem); }
@@ -758,7 +765,11 @@
         </div>
         <div class="hero-content hero-content--brand">
           <p class="eyebrow" data-i18n="hero-eyebrow">Faro de Maspalomas · Gran Canaria</p>
-          <h1 class="hero-brand-title"><img class="hero-brand-mark" src="assets/logosxmasmarketcenter.png" alt="BEEFEATER XMAS MARKET 2026" /></h1>
+          <div class="hero-brand-lockup">
+            <img class="hero-yeoman hero-yeoman--left" src="assets/yeoman.png" alt="" aria-hidden="true" />
+            <h1 class="hero-brand-title"><img class="hero-brand-mark" src="assets/logosxmasmarketcenter.png" alt="BEEFEATER XMAS MARKET 2026" /></h1>
+            <img class="hero-yeoman hero-yeoman--right" src="assets/yeoman.png" alt="" aria-hidden="true" />
+          </div>
           <div class="hero-event-date" aria-label="4, 5, 6, 7 y 8 de diciembre de 2026"><span data-i18n="hero-date-month">DICIEMBRE DE 2026</span><strong>4, 5, 6, 7 y 8</strong></div>
         </div>
         <div class="hero-bottom">
