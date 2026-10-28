@@ -1065,7 +1065,15 @@
         fashion: { folder: 'moda' },
         gastronomy: { folder: 'gastronomia' },
         craft: { folder: 'artesania' },
-        art: { folder: 'arte' },
+        art: {
+          folder: 'arte',
+          featured: [
+            {
+              file: 'Logo kilos de arte Studio - Carla Monzon.png',
+              alt: 'Kilos de Arte Studio — Carla Monzón'
+            }
+          ]
+        },
         gifts: { folder: 'regalos' }
       };
       let currentLanguage = 'es';
@@ -1191,12 +1199,12 @@
       legalModal.querySelectorAll('[data-legal-close]').forEach((element) => element.addEventListener('click', closeLegalModal));
       document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeLegalModal(); });
 
-      function loadMarketLogo(path) {
+      function loadMarketLogo(logo) {
         return new Promise((resolve) => {
           const image = new Image();
-          image.onload = () => resolve(path);
+          image.onload = () => resolve(logo);
           image.onerror = () => resolve(null);
-          image.src = path;
+          image.src = logo.src;
         });
       }
       function createGenericMarketCard(index) {
@@ -1218,24 +1226,30 @@
           const card = document.createElement('article');
           const image = document.createElement('img');
           card.className = 'market-logo-card';
-          image.src = source;
-          image.alt = `${categoryLabel} ${index + 1}`;
+          image.src = source.src;
+          image.alt = source.alt || `${categoryLabel} ${index + 1}`;
           card.append(image);
           marketLogoTrack.append(card);
         });
       }
       async function renderMarketLogos(category) {
         const request = ++marketLogoRequest;
-        const folders = category === 'all'
-          ? Object.values(marketCategories).map(({ folder }) => folder)
-          : [marketCategories[category].folder];
-        const candidates = folders.flatMap((folder) => Array.from({ length: 12 }, (_, index) => {
-          const number = String(index + 1).padStart(2, '0');
-          return [
-            `assets/logos/MARKET/${folder}/${number}.png`,
-            `assets/logos/MARKET/${folder}/${number}.jpg`
-          ];
-        }).flat());
+        const categories = category === 'all'
+          ? Object.values(marketCategories)
+          : [marketCategories[category]];
+        const candidates = categories.flatMap(({ folder, featured = [] }) => [
+          ...Array.from({ length: 12 }, (_, index) => {
+            const number = String(index + 1).padStart(2, '0');
+            return [
+              { src: `assets/logos/MARKET/${folder}/${number}.png` },
+              { src: `assets/logos/MARKET/${folder}/${number}.jpg` }
+            ];
+          }).flat(),
+          ...featured.map(({ file, alt }) => ({
+            src: `assets/logos/MARKET/${folder}/${encodeURIComponent(file)}`,
+            alt
+          }))
+        ]);
         const logos = (await Promise.all(candidates.map(loadMarketLogo))).filter(Boolean);
         if (request !== marketLogoRequest || category !== activeMarketCategory) return;
         renderMarketCards(logos);
