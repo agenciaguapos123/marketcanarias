@@ -423,7 +423,7 @@
       .market-logo-viewport::-webkit-scrollbar { display: none; }
       .market-logo-track { display: flex; width: max-content; min-width: 100%; gap: 1px; }
       .market-logo-card { flex: 0 0 clamp(215px, 25vw, 340px); min-height: 300px; display: grid; place-items: center; padding: clamp(22px, 3vw, 42px); color: var(--deep); background: var(--cream); scroll-snap-align: start; }
-      .market-logo-card img { display: block; width: min(100%, 240px); max-height: 126px; object-fit: contain; }
+      .market-logo-card img { display: block; width: 100%; height: auto; object-fit: contain; }
       .market-logo-card--generic { align-content: center; gap: 13px; text-align: center; }
       .market-logo-card--generic > span { color: rgba(60,7,17,.66); font: .66rem var(--mono); letter-spacing: .14em; }
       .market-logo-card--generic > strong { color: var(--red); font: 600 clamp(4.3rem, 7vw, 7rem)/.72 var(--display); letter-spacing: -.015em; }
@@ -815,8 +815,8 @@
         </div>
         <div class="programme-days-wrap">
           <div class="programme-days" aria-label="Programa del 4 al 8 de diciembre">
-            <button class="programme-day" type="button" data-day-key="day-four" data-date="04" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">04</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--long">Gerardo Quevedo</span><span class="day-performer">Jia Miles</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-five" data-date="05" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">05</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">Kilian Viera</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-four" data-date="04" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">04</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--long">Gerardo Quevedo</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-five" data-date="05" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">05</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">Kilian Viera</span><span class="day-performer">Jia Miles</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
             <button class="programme-day" type="button" data-day-key="day-six" data-date="06" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">06</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--long">Alberto Monterrey</span><span class="day-performer">DJ Estro</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
             <button class="programme-day" type="button" data-day-key="day-seven" data-date="07" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">07</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
             <button class="programme-day" type="button" data-day-key="day-eight" data-date="08" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">08</span></span><span><span class="day-rule"></span><span class="day-placeholder" data-i18n="day-placeholder">Programa próximamente</span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
@@ -835,7 +835,8 @@
         <button class="market-cta" type="button" data-participation-open data-i18n="market-cta">QUIERO PARTICIPAR CON MI PUESTO</button>
         <div class="market-directory">
           <div class="market-filters" aria-label="Filtros de puestos">
-            <button class="market-filter active" type="button" data-market-filter="accessories" aria-pressed="true" data-i18n="market-filter-accessories">Accesorios y complementos</button>
+            <button class="market-filter active" type="button" data-market-filter="all" aria-pressed="true" data-i18n="market-filter-all">Todos</button>
+            <button class="market-filter" type="button" data-market-filter="accessories" aria-pressed="false" data-i18n="market-filter-accessories">Accesorios y complementos</button>
             <button class="market-filter" type="button" data-market-filter="fashion" aria-pressed="false" data-i18n="market-filter-fashion">Moda</button>
             <button class="market-filter" type="button" data-market-filter="gastronomy" aria-pressed="false" data-i18n="market-filter-gastronomy">Gastronomía</button>
             <button class="market-filter" type="button" data-market-filter="craft" aria-pressed="false" data-i18n="market-filter-craft">Artesanía</button>
@@ -1003,7 +1004,7 @@
           'nav-home':'Inicio','nav-programme':'Programa','nav-market':'Market','nav-contact':'Contacto',
           'hero-eyebrow':'Faro de Maspalomas · Gran Canaria','hero-date-month':'DICIEMBRE','hero-copy':'Una nueva forma de vivir la Navidad. Muy pronto en el Faro de Maspalomas.','hero-meta-label':'Próximamente','hero-meta':'Faro de Maspalomas','scroll':'Desliza para descubrir',
           'programme-label':'Programa','programme-title':'Días para recordar.','programme-copy':'El cartel completo llegará más adelante. Por ahora, reserva un hueco para una Navidad que se vive fuera de casa.','programme-note':'El programa se anunciará pronto.','general-hours-title':'Horarios generales','day-four':'Viernes','day-five':'Sábado','day-six':'Domingo','day-seven':'Lunes','day-eight':'Martes','day-placeholder':'Programa próximamente','day-open':'Ver detalle →','programme-scroll-label':'Ver más días','modal-detail-label':'Detalle del día','modal-detail-copy':'El programa detallado de este día se anunciará próximamente. Vuelve pronto para descubrirlo.','modal-close':'Cerrar detalle',
-          'market-label':'Market','market-side':'Hallazgos con historia','market-title':'UN XMAS MARKET ÚNICO','market-copy':'Puestos cuidados, detalles para regalar y marcas con algo que contar. La selección 2026 se desvelará muy pronto.','market-cta':'QUIERO PARTICIPAR CON MI PUESTO','market-filter-accessories':'Accesorios y complementos','market-filter-fashion':'Moda','market-filter-gastronomy':'Gastronomía','market-filter-craft':'Artesanía','market-filter-art':'Arte','market-filter-gifts':'Regalos','market-slider-prev':'Ver logos anteriores','market-slider-next':'Ver más logos',
+          'market-label':'Market','market-side':'Hallazgos con historia','market-title':'UN XMAS MARKET ÚNICO','market-copy':'Puestos cuidados, detalles para regalar y marcas con algo que contar. La selección 2026 se desvelará muy pronto.','market-cta':'QUIERO PARTICIPAR CON MI PUESTO','market-filter-all':'Todos','market-filter-accessories':'Accesorios y complementos','market-filter-fashion':'Moda','market-filter-gastronomy':'Gastronomía','market-filter-craft':'Artesanía','market-filter-art':'Arte','market-filter-gifts':'Regalos','market-slider-prev':'Ver logos anteriores','market-slider-next':'Ver más logos',
           'participation-kicker':'Participa','participation-title':'Tu puesto en el market.','participation-copy':'Déjanos estos datos para preparar tu solicitud de participación.','participation-name':'Nombre','participation-email':'Email','participation-brand':'Marca o proyecto','participation-category':'Categoría','participation-category-placeholder':'Elige una categoría','participation-category-design':'Diseño y artesanía','participation-category-food':'Gastronomía','participation-category-other':'Otra','participation-submit':'Enviar solicitud','participation-status':'El formulario definitivo estará disponible próximamente; por ahora no se enviará ningún dato.','participation-close':'Cerrar formulario',
           'food-side':'Sabor de mercado','food-title':'Sabor de mercado','food-copy':'Bocados que apetece probar, mesas para quedarse y ese brindis que abre la noche. El recorrido gastronómico se anunciará próximamente.','schedule-market-label':'Horario Market','schedule-market-days':'De viernes a martes','schedule-leisure-label':'Horario Zona Ocio','schedule-leisure-days':'De viernes a lunes · el martes hasta las 22:00','schedule-food-label':'Horario Foodtruck','schedule-food-days':'De viernes a lunes · el martes hasta las 22:00',
           'collab-label':'Participan','collab-image-placeholder':'Imagen del evento','sponsor-title':'Patrocina','collaborator-title':'Colabora','organizer-title':'Organiza',
@@ -1014,7 +1015,7 @@
           'nav-home':'Startseite','nav-programme':'Programm','nav-market':'Market','nav-contact':'Kontakt',
           'hero-eyebrow':'Faro de Maspalomas · Gran Canaria','hero-date-month':'DEZEMBER 2026','hero-copy':'Eine neue Art, Weihnachten zu erleben. Schon bald am Faro de Maspalomas.','hero-meta-label':'Demnächst','hero-meta':'Faro de Maspalomas','scroll':'Zum Entdecken scrollen',
           'programme-label':'Programm','programme-title':'Tage, die in Erinnerung bleiben.','programme-copy':'Das vollständige Programm wird später bekannt gegeben. Reserviere dir schon jetzt Zeit für Weihnachten unter freiem Himmel.','programme-note':'Das Programm wird bald bekannt gegeben.','general-hours-title':'Allgemeine Öffnungszeiten','day-four':'Freitag','day-five':'Samstag','day-six':'Sonntag','day-seven':'Montag','day-eight':'Dienstag','day-placeholder':'Programm folgt in Kürze','day-open':'Details ansehen →','programme-scroll-label':'Weitere Tage ansehen','modal-detail-label':'Tagesdetails','modal-detail-copy':'Das detaillierte Programm für diesen Tag wird bald bekannt gegeben. Schau bald wieder vorbei.','modal-close':'Details schließen',
-          'market-label':'Market','market-side':'Fundstücke mit Geschichte','market-title':'EIN EINZIGARTIGER XMAS MARKET','market-copy':'Sorgfältig ausgewählte Stände, besondere Geschenkideen und Marken mit etwas zu erzählen. Die Auswahl für 2026 wird bald enthüllt.','market-cta':'ICH MÖCHTE MIT MEINEM STAND TEILNEHMEN','market-filter-accessories':'Accessoires und Ergänzungen','market-filter-fashion':'Mode','market-filter-gastronomy':'Gastronomie','market-filter-craft':'Kunsthandwerk','market-filter-art':'Kunst','market-filter-gifts':'Geschenke','market-slider-prev':'Vorherige Logos ansehen','market-slider-next':'Weitere Logos ansehen',
+          'market-label':'Market','market-side':'Fundstücke mit Geschichte','market-title':'EIN EINZIGARTIGER XMAS MARKET','market-copy':'Sorgfältig ausgewählte Stände, besondere Geschenkideen und Marken mit etwas zu erzählen. Die Auswahl für 2026 wird bald enthüllt.','market-cta':'ICH MÖCHTE MIT MEINEM STAND TEILNEHMEN','market-filter-all':'Alle','market-filter-accessories':'Accessoires und Ergänzungen','market-filter-fashion':'Mode','market-filter-gastronomy':'Gastronomie','market-filter-craft':'Kunsthandwerk','market-filter-art':'Kunst','market-filter-gifts':'Geschenke','market-slider-prev':'Vorherige Logos ansehen','market-slider-next':'Weitere Logos ansehen',
           'participation-kicker':'Teilnehmen','participation-title':'Dein Stand im Market.','participation-copy':'Hinterlasse uns diese Angaben, damit wir deine Teilnahme vorbereiten können.','participation-name':'Name','participation-email':'E-Mail','participation-brand':'Marke oder Projekt','participation-category':'Kategorie','participation-category-placeholder':'Kategorie auswählen','participation-category-design':'Design und Kunsthandwerk','participation-category-food':'Gastronomie','participation-category-other':'Andere','participation-submit':'Anfrage senden','participation-status':'Das endgültige Formular wird bald verfügbar sein; derzeit werden keine Daten übermittelt.','participation-close':'Formular schließen',
           'food-side':'Marktgenuss','food-title':'Marktgenuss','food-copy':'Kleine Köstlichkeiten, Tische zum Verweilen und der Toast, der die Nacht eröffnet. Das gastronomische Angebot wird bald bekannt gegeben.','schedule-market-label':'Market-Öffnungszeiten','schedule-market-days':'Freitag bis Dienstag','schedule-leisure-label':'Öffnungszeiten Freizeitbereich','schedule-leisure-days':'Freitag bis Montag · Dienstag bis 22:00 Uhr','schedule-food-label':'Foodtruck-Öffnungszeiten','schedule-food-days':'Freitag bis Montag · Dienstag bis 22:00 Uhr',
           'collab-label':'Beteiligt','collab-image-placeholder':'Eventbild','sponsor-title':'Sponsoren','collaborator-title':'Kooperationspartner','organizer-title':'Veranstalter',
@@ -1025,7 +1026,7 @@
           'nav-home':'Home','nav-programme':'Programme','nav-market':'Market','nav-contact':'Contact',
           'hero-eyebrow':'Faro de Maspalomas · Gran Canaria','hero-date-month':'DECEMBER 2026','hero-copy':'A new way to experience Christmas. Coming soon to Faro de Maspalomas.','hero-meta-label':'Coming soon','hero-meta':'Faro de Maspalomas','scroll':'Scroll to discover',
           'programme-label':'Programme','programme-title':'Days to remember.','programme-copy':'The full line-up will be revealed later. For now, save space for a Christmas made to be experienced outdoors.','programme-note':'The programme will be announced soon.','general-hours-title':'General opening hours','day-four':'Friday','day-five':'Saturday','day-six':'Sunday','day-seven':'Monday','day-eight':'Tuesday','day-placeholder':'Programme coming soon','day-open':'View details →','programme-scroll-label':'See more days','modal-detail-label':'Day details','modal-detail-copy':'The detailed programme for this day will be announced soon. Please check back shortly.','modal-close':'Close details',
-          'market-label':'Market','market-side':'Finds with a story','market-title':'A UNIQUE XMAS MARKET','market-copy':'Thoughtful stalls, gifts to give and brands with something to say. The 2026 selection will be revealed soon.','market-cta':'I WANT A STALL AT THE MARKET','market-filter-accessories':'Accessories and add-ons','market-filter-fashion':'Fashion','market-filter-gastronomy':'Gastronomy','market-filter-craft':'Craftsmanship','market-filter-art':'Art','market-filter-gifts':'Gifts','market-slider-prev':'View previous logos','market-slider-next':'View more logos',
+          'market-label':'Market','market-side':'Finds with a story','market-title':'A UNIQUE XMAS MARKET','market-copy':'Thoughtful stalls, gifts to give and brands with something to say. The 2026 selection will be revealed soon.','market-cta':'I WANT A STALL AT THE MARKET','market-filter-all':'All','market-filter-accessories':'Accessories and add-ons','market-filter-fashion':'Fashion','market-filter-gastronomy':'Gastronomy','market-filter-craft':'Craftsmanship','market-filter-art':'Art','market-filter-gifts':'Gifts','market-slider-prev':'View previous logos','market-slider-next':'View more logos',
           'participation-kicker':'Participate','participation-title':'Your stall at the market.','participation-copy':'Leave us these details so we can prepare your participation request.','participation-name':'Name','participation-email':'Email','participation-brand':'Brand or project','participation-category':'Category','participation-category-placeholder':'Choose a category','participation-category-design':'Design and crafts','participation-category-food':'Food','participation-category-other':'Other','participation-submit':'Send request','participation-status':'The final form will be available soon; no data will be sent yet.','participation-close':'Close form',
           'food-side':'Market flavours','food-title':'Market flavours','food-copy':'Bites worth trying, tables worth staying at and that toast which starts the night. The food line-up will be announced soon.','schedule-market-label':'Market hours','schedule-market-days':'Friday to Tuesday','schedule-leisure-label':'Leisure area hours','schedule-leisure-days':'Friday to Monday · Tuesday until 22:00','schedule-food-label':'Food truck hours','schedule-food-days':'Friday to Monday · Tuesday until 22:00',
           'collab-label':'Participating','collab-image-placeholder':'Event image','sponsor-title':'Sponsors','collaborator-title':'Collaborates','organizer-title':'Organises',
@@ -1071,16 +1072,16 @@
       let activeProgrammeDay = null;
       let activeParticipationTrigger = null;
       let activeLegalTrigger = null;
-      let activeMarketCategory = 'accessories';
+      let activeMarketCategory = 'all';
       let marketLogoRequest = 0;
       let marketAutoplayTimer = null;
       const programmeDetails = {
         'day-four': [
-          { artist: 'GERARDO QUEVEDO', time: '17:00 - 20:00' },
-          { artist: 'JIA MILES', time: '20:00 - 22:00' }
+          { artist: 'GERARDO QUEVEDO', time: '17:00 - 20:00' }
         ],
         'day-five': [
-          { artist: 'KILIAN VIERA', time: '19:00 - 20:30' }
+          { artist: 'KILIAN VIERA', time: '19:00 - 20:30' },
+          { artist: 'JIA MILES', time: '20:00 - 22:00' }
         ],
         'day-six': [
           { artist: 'ALBERTO MONTERREY' },
@@ -1225,14 +1226,16 @@
       }
       async function renderMarketLogos(category) {
         const request = ++marketLogoRequest;
-        const { folder } = marketCategories[category];
-        const candidates = Array.from({ length: 12 }, (_, index) => {
+        const folders = category === 'all'
+          ? Object.values(marketCategories).map(({ folder }) => folder)
+          : [marketCategories[category].folder];
+        const candidates = folders.flatMap((folder) => Array.from({ length: 12 }, (_, index) => {
           const number = String(index + 1).padStart(2, '0');
           return [
             `assets/logos/MARKET/${folder}/${number}.png`,
             `assets/logos/MARKET/${folder}/${number}.jpg`
           ];
-        }).flat();
+        }).flat());
         const logos = (await Promise.all(candidates.map(loadMarketLogo))).filter(Boolean);
         if (request !== marketLogoRequest || category !== activeMarketCategory) return;
         renderMarketCards(logos);
