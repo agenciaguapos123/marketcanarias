@@ -446,7 +446,7 @@
       .food-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(220,6,47,.22), transparent 45%); mix-blend-mode: multiply; }
 
       .collaborate { color: var(--cream); background: var(--red); overflow: hidden; }
-      .collaborate-layout { display: grid; grid-template-columns: minmax(0, .92fr) minmax(420px, 1.08fr); min-height: clamp(720px, 58vw, 900px); }
+      .collaborate-layout { display: grid; grid-template-columns: minmax(0, .92fr) minmax(420px, 1.08fr); }
       .collaborate-copy { display: flex; padding: clamp(74px, 10vw, 160px) clamp(20px, 7.2vw, 130px); }
       .collaborate-main { width: min(100%, 760px); min-width: 0; }
       .logo-tier { margin-top: clamp(28px, 3.6vw, 48px); }
@@ -480,8 +480,8 @@
       .organizer-logo--inner { max-width: 155px; max-height: 112px; }
       .organizer-logo--guapos { max-width: 370px; max-height: 108px; }
       .organizer-logo--discordia { max-width: 295px; max-height: 100px; }
-      .collaborate-media { position: relative; min-width: 0; }
-      .collaborate-media-slot { width: 100%; height: 100%; overflow: hidden; }
+      .collaborate-media { position: relative; min-width: 0; min-height: 0; }
+      .collaborate-media-slot { position: absolute; inset: 0; overflow: hidden; }
       .collaborate-media-slot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
       @keyframes marquee { to { transform: translateX(-50%); } }
 
