@@ -1228,8 +1228,11 @@
         const { folder } = marketCategories[category];
         const candidates = Array.from({ length: 12 }, (_, index) => {
           const number = String(index + 1).padStart(2, '0');
-          return `assets/logos/MARKET/${folder}/${number}.png`;
-        });
+          return [
+            `assets/logos/MARKET/${folder}/${number}.png`,
+            `assets/logos/MARKET/${folder}/${number}.jpg`
+          ];
+        }).flat();
         const logos = (await Promise.all(candidates.map(loadMarketLogo))).filter(Boolean);
         if (request !== marketLogoRequest || category !== activeMarketCategory) return;
         renderMarketCards(logos);

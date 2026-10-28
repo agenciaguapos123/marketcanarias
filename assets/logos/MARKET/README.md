@@ -1,6 +1,6 @@
 # Logos del Market
 
-Guarda los logos PNG de cada categoría con nombres consecutivos: `01.png`, `02.png`, `03.png`, etc. Se mostrarán automáticamente en el carrusel correspondiente (hasta `12.png` por categoría).
+Guarda los logos PNG o JPG de cada categoría con nombres consecutivos: `01.png`, `02.png`, `03.jpg`, etc. Se mostrarán automáticamente en el carrusel correspondiente (hasta 12 por categoría).
 
 Carpetas disponibles:
 
