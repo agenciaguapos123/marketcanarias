@@ -458,10 +458,10 @@
       .logo-tier-heading { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 6px; margin-bottom: 8px; }
       .logo-tier-heading span { color: rgba(255,250,246,.7); font: .63rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
       .logo-tier-heading h2 { margin: 0; font: 600 clamp(1.55rem, 2.5vw, 2.7rem)/.78 var(--display); letter-spacing: .01em; text-transform: uppercase; }
-      .logo-grid { display: grid; gap: 1px; border: 1px solid rgba(255,250,246,.55); background: rgba(255,250,246,.38); }
+      .logo-grid { display: grid; gap: 1px; border: 1px solid rgba(255,250,246,.55); }
       .logo-tier--tier-1 { --logo-tier-scale: 1; --logo-tier-min-height: clamp(118px, 11vw, 165px); }
       .logo-tier--tier-2 { --logo-tier-scale: .5; --logo-tier-min-height: clamp(92px, 8vw, 118px); }
-      .logo-tier--tier-3 { --logo-tier-scale: .62; --logo-tier-min-height: clamp(100px, 8vw, 128px); }
+      .logo-tier--tier-3 { --logo-tier-scale: .8; --logo-tier-min-height: clamp(116px, 9.5vw, 150px); }
       .logo-tier--tier-1 .logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .logo-tier--tier-3 .logo-grid { grid-template-columns: minmax(0, 1fr); }
@@ -471,7 +471,6 @@
         min-width: 0;
         min-height: var(--logo-tier-min-height, 100px);
         padding: clamp(14px, 2.6vw, 34px);
-        background: rgba(151,0,32,.28);
       }
       .logo-image { display: block; object-fit: contain; }
       .logo-item .logo-image { width: min(100%, 280px); max-height: clamp(72px, 8vw, 118px); }
