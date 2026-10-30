@@ -461,11 +461,12 @@
       .logo-tier-heading h2 { margin: 0; font: 600 clamp(1.55rem, 2.5vw, 2.7rem)/.78 var(--display); letter-spacing: .01em; text-transform: uppercase; }
       .logo-grid { display: grid; gap: 1px; }
       .logo-tier--tier-2 { --logo-tier-scale: .6; --logo-tier-min-height: clamp(92px, 8vw, 118px); }
-      .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.7vw, 24px); border: 0; background: transparent; }
+      .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 1.7vw, 24px); border: 0; background: transparent; }
       .logo-tier--tier-2 .logo-item { padding: 0; border: 0; background: transparent; box-shadow: none; }
       .sponsor-logo-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: clamp(20px, 4vw, 54px); }
       .sponsor-logo-list .logo-item { min-height: 0; padding: 0; }
       .sponsor-logo-list .logo-item--tier-1 { --logo-tier-scale: 1; min-height: clamp(118px, 11vw, 165px); }
+      .sponsor-logo-list .logo-item--tier-2 { grid-column: 1 / -1; justify-self: center; width: min(100%, 230px); --logo-tier-scale: .65; min-height: clamp(86px, 7vw, 110px); }
       .sponsor-logo-list .logo-item--tier-3 { grid-column: 1 / -1; justify-self: center; width: min(100%, 400px); --logo-tier-scale: 1; min-height: clamp(140px, 11vw, 176px); }
       .logo-item {
         display: grid;
@@ -641,6 +642,7 @@
         .sponsor-tiers { margin-top: 30px; }
         .logo-item { padding: 18px; }
         .logo-tier--tier-2 { --logo-tier-min-height: 88px; }
+        .sponsor-logo-list .logo-item--tier-2 { min-height: 76px; }
         .sponsor-logo-list .logo-item--tier-3 { min-height: 118px; }
         .sponsor-logo-list .logo-item--tier-3 .logo-image { max-height: 106px; }
         .logo-item .logo-image { max-height: 76px; }
@@ -706,7 +708,7 @@
         .logo-tier { margin-top: 22px; }
         .logo-tier + .logo-tier { margin-top: 18px; }
         .sponsor-tiers { margin-top: 22px; }
-        .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .logo-item { padding: 12px 8px; }
         .organizer-block { justify-items: center; gap: 12px; margin-top: 22px; padding-top: 18px; }
         .collaborate-media-slot { min-height: 0; }
@@ -900,13 +902,13 @@
           <div class="sponsor-logo-list" aria-labelledby="sponsor-heading">
             <div class="logo-item logo-item--sponsor logo-item--tier-1" data-logo-tier="1"><img class="logo-image" src="assets/logos/PATROCINA/tier%201/1Beefeaterlondon.png" alt="Beefeater London" /></div>
             <div class="logo-item logo-item--sponsor logo-item--tier-1" data-logo-tier="1"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%201/2sbt-maspalomas.png" alt="Ayuntamiento de San Bartolomé de Tirajana" /></div>
+            <div class="logo-item logo-item--sponsor logo-item--tier-2" data-logo-tier="2"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%202/MAHOU.png" alt="Mahou" /></div>
             <div class="logo-item logo-item--sponsor logo-item--tier-3" data-logo-tier="3"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%203/01.png" alt="Mercedes-Benz Louzao" /></div>
           </div>
         </div>
         <div class="logo-tier logo-tier--tier-2" data-logo-tier="2">
           <div class="logo-tier-heading"><h2 data-i18n="collaborator-title">Colabora</h2></div>
           <div class="logo-grid" aria-label="Marcas colaboradoras">
-              <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/MAHOU.png" alt="Mahou" /></div>
               <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/APERITIVOS.png" alt="Aperitivos Snack" /></div>
               <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/VIAJESCANARIAS.png" alt="Viajes Canarias Europa" /></div>
           </div>
