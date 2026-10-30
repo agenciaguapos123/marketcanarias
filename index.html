@@ -461,7 +461,7 @@
       .logo-grid { display: grid; gap: 1px; border: 1px solid rgba(255,250,246,.55); }
       .logo-tier--tier-1 { --logo-tier-scale: 1; --logo-tier-min-height: clamp(118px, 11vw, 165px); }
       .logo-tier--tier-2 { --logo-tier-scale: .5; --logo-tier-min-height: clamp(92px, 8vw, 118px); }
-      .logo-tier--tier-3 { --logo-tier-scale: .8; --logo-tier-min-height: clamp(116px, 9.5vw, 150px); }
+      .logo-tier--tier-3 { --logo-tier-scale: 1; --logo-tier-min-height: clamp(150px, 12vw, 190px); }
       .logo-tier--tier-1 .logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .logo-tier--tier-3 .logo-grid { grid-template-columns: minmax(0, 1fr); }
@@ -474,6 +474,7 @@
       }
       .logo-image { display: block; object-fit: contain; }
       .logo-item .logo-image { width: min(100%, 280px); max-height: clamp(72px, 8vw, 118px); }
+      .logo-tier--tier-3 .logo-item .logo-image { max-height: clamp(132px, 11vw, 176px); }
       /* Tiers are intentionally visual-only: no extra labels are shown to visitors. */
       .logo-item .logo-image { transform: scale(var(--logo-tier-scale, 1)); transform-origin: center; }
       .logo-image--screen { mix-blend-mode: screen; }
@@ -642,7 +643,8 @@
         .logo-item { padding: 18px; }
         .logo-tier--tier-1 { --logo-tier-min-height: 118px; }
         .logo-tier--tier-2 { --logo-tier-min-height: 88px; }
-        .logo-tier--tier-3 { --logo-tier-min-height: 94px; }
+        .logo-tier--tier-3 { --logo-tier-min-height: 126px; }
+        .logo-tier--tier-3 .logo-item .logo-image { max-height: 112px; }
         .logo-item .logo-image { max-height: 76px; }
         .organizer-block { margin-top: 28px; padding-top: 22px; }
         .collaborate-media-slot { min-height: 0; height: auto; aspect-ratio: 4 / 3; }
