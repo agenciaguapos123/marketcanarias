@@ -452,19 +452,16 @@
       .logo-tier { margin-top: clamp(28px, 3.6vw, 48px); }
       .logo-tier + .logo-tier { margin-top: clamp(20px, 2.6vw, 34px); }
       .sponsor-tiers { margin-top: clamp(28px, 3.6vw, 48px); }
-      .sponsor-tiers .logo-tier { margin-top: 0; }
-      .sponsor-tiers .logo-tier + .logo-tier { margin-top: clamp(20px, 2.6vw, 34px); }
-      .sponsor-tiers + .logo-tier { margin-top: clamp(28px, 3.6vw, 48px); }
       .logo-tier-heading { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 6px; margin-bottom: 8px; }
       .logo-tier-heading span { color: rgba(255,250,246,.7); font: .63rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
       .logo-tier-heading h2 { margin: 0; font: 600 clamp(1.55rem, 2.5vw, 2.7rem)/.78 var(--display); letter-spacing: .01em; text-transform: uppercase; }
       .logo-grid { display: grid; gap: 1px; border: 1px solid rgba(255,250,246,.55); }
-      .logo-tier--tier-1 { --logo-tier-scale: 1; --logo-tier-min-height: clamp(118px, 11vw, 165px); }
       .logo-tier--tier-2 { --logo-tier-scale: .5; --logo-tier-min-height: clamp(92px, 8vw, 118px); }
-      .logo-tier--tier-3 { --logo-tier-scale: 1; --logo-tier-min-height: clamp(150px, 12vw, 190px); }
-      .logo-tier--tier-1 .logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .logo-tier--tier-3 .logo-grid { grid-template-columns: minmax(0, 1fr); }
+      .sponsor-logo-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: clamp(20px, 4vw, 54px); }
+      .sponsor-logo-list .logo-item { min-height: 0; padding: 0; }
+      .sponsor-logo-list .logo-item--tier-1 { --logo-tier-scale: 1; min-height: clamp(118px, 11vw, 165px); }
+      .sponsor-logo-list .logo-item--tier-3 { grid-column: 1 / -1; justify-self: center; width: min(100%, 440px); --logo-tier-scale: 1; min-height: clamp(150px, 12vw, 190px); }
       .logo-item {
         display: grid;
         place-items: center;
@@ -474,7 +471,7 @@
       }
       .logo-image { display: block; object-fit: contain; }
       .logo-item .logo-image { width: min(100%, 280px); max-height: clamp(72px, 8vw, 118px); }
-      .logo-tier--tier-3 .logo-item .logo-image { max-height: clamp(132px, 11vw, 176px); }
+      .sponsor-logo-list .logo-item--tier-3 .logo-image { max-height: clamp(132px, 11vw, 176px); }
       /* Tiers are intentionally visual-only: no extra labels are shown to visitors. */
       .logo-item .logo-image { transform: scale(var(--logo-tier-scale, 1)); transform-origin: center; }
       .logo-image--screen { mix-blend-mode: screen; }
@@ -637,14 +634,10 @@
         .logo-tier { margin-top: 30px; }
         .logo-tier + .logo-tier { margin-top: 24px; }
         .sponsor-tiers { margin-top: 30px; }
-        .sponsor-tiers .logo-tier { margin-top: 0; }
-        .sponsor-tiers .logo-tier + .logo-tier { margin-top: 24px; }
-        .sponsor-tiers + .logo-tier { margin-top: 30px; }
         .logo-item { padding: 18px; }
-        .logo-tier--tier-1 { --logo-tier-min-height: 118px; }
         .logo-tier--tier-2 { --logo-tier-min-height: 88px; }
-        .logo-tier--tier-3 { --logo-tier-min-height: 126px; }
-        .logo-tier--tier-3 .logo-item .logo-image { max-height: 112px; }
+        .sponsor-logo-list .logo-item--tier-3 { min-height: 126px; }
+        .sponsor-logo-list .logo-item--tier-3 .logo-image { max-height: 112px; }
         .logo-item .logo-image { max-height: 76px; }
         .organizer-block { margin-top: 28px; padding-top: 22px; }
         .collaborate-media-slot { min-height: 0; height: auto; aspect-ratio: 4 / 3; }
@@ -708,9 +701,6 @@
         .logo-tier { margin-top: 22px; }
         .logo-tier + .logo-tier { margin-top: 18px; }
         .sponsor-tiers { margin-top: 22px; }
-        .sponsor-tiers .logo-tier { margin-top: 0; }
-        .sponsor-tiers .logo-tier + .logo-tier { margin-top: 18px; }
-        .sponsor-tiers + .logo-tier { margin-top: 22px; }
         .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         .logo-item { padding: 12px 8px; }
         .organizer-block { justify-items: center; gap: 12px; margin-top: 22px; padding-top: 18px; }
@@ -901,17 +891,11 @@
         <div class="collaborate-copy">
         <div class="collaborate-main">
         <div class="sponsor-tiers">
-          <div class="logo-tier logo-tier--tier-1" data-logo-tier="1">
-            <div class="logo-tier-heading"><h2 id="sponsor-heading" data-i18n="sponsor-title">Patrocina</h2></div>
-            <div class="logo-grid" aria-label="Patrocinadores principales">
-              <div class="logo-item logo-item--sponsor"><img class="logo-image" src="assets/logos/PATROCINA/tier%201/1Beefeaterlondon.png" alt="Beefeater London" /></div>
-              <div class="logo-item logo-item--sponsor"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%201/2sbt-maspalomas.png" alt="Ayuntamiento de San Bartolomé de Tirajana" /></div>
-            </div>
-          </div>
-          <div class="logo-tier logo-tier--tier-3" data-logo-tier="3" role="group" aria-labelledby="sponsor-heading">
-            <div class="logo-grid">
-              <div class="logo-item logo-item--sponsor"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%203/01.png" alt="Mercedes-Benz Louzao" /></div>
-            </div>
+          <div class="logo-tier-heading"><h2 id="sponsor-heading" data-i18n="sponsor-title">Patrocina</h2></div>
+          <div class="sponsor-logo-list" aria-labelledby="sponsor-heading">
+            <div class="logo-item logo-item--sponsor logo-item--tier-1" data-logo-tier="1"><img class="logo-image" src="assets/logos/PATROCINA/tier%201/1Beefeaterlondon.png" alt="Beefeater London" /></div>
+            <div class="logo-item logo-item--sponsor logo-item--tier-1" data-logo-tier="1"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%201/2sbt-maspalomas.png" alt="Ayuntamiento de San Bartolomé de Tirajana" /></div>
+            <div class="logo-item logo-item--sponsor logo-item--tier-3" data-logo-tier="3"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%203/01.png" alt="Mercedes-Benz Louzao" /></div>
           </div>
         </div>
         <div class="logo-tier logo-tier--tier-2" data-logo-tier="2">
