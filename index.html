@@ -457,8 +457,9 @@
       .logo-tier-heading span { color: rgba(255,250,246,.7); font: .63rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
       .logo-tier-heading h2 { margin: 0; font: 600 clamp(1.55rem, 2.5vw, 2.7rem)/.78 var(--display); letter-spacing: .01em; text-transform: uppercase; }
       .logo-grid { display: grid; gap: 1px; }
-      .logo-tier--tier-2 { --logo-tier-scale: .5; --logo-tier-min-height: clamp(92px, 8vw, 118px); }
-      .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .logo-tier--tier-2 { --logo-tier-scale: .6; --logo-tier-min-height: clamp(92px, 8vw, 118px); }
+      .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.7vw, 24px); border: 0; background: transparent; }
+      .logo-tier--tier-2 .logo-item { padding: 0; border: 0; background: transparent; box-shadow: none; }
       .sponsor-logo-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: clamp(20px, 4vw, 54px); }
       .sponsor-logo-list .logo-item { min-height: 0; padding: 0; }
       .sponsor-logo-list .logo-item--tier-1 { --logo-tier-scale: 1; min-height: clamp(118px, 11vw, 165px); }
@@ -823,11 +824,11 @@
         </div>
         <div class="programme-days-wrap">
           <div class="programme-days" aria-label="Programa del 4 al 8 de diciembre">
-            <button class="programme-day" type="button" data-day-key="day-four" data-date="04" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">04</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--long">Gerardo Quevedo</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-five" data-date="05" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">05</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">Kilian Viera</span><span class="day-performer">Jia Miles</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-six" data-date="06" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">06</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--long">Alberto Monterrey</span><span class="day-performer">DJ Estro</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-seven" data-date="07" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">07</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-eight" data-date="08" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">08</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-four" data-date="04" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">04</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--long">Gerardo Quevedo</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-five" data-date="05" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">05</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">Kilian Viera</span><span class="day-performer">Jia Miles</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-six" data-date="06" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">06</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--long">Alberto Monterrey</span><span class="day-performer">DJ Estro</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-seven" data-date="07" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">07</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-eight" data-date="08" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">08</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
           </div>
           <button class="programme-scroll-next" type="button" data-programme-scroll aria-label="Ver más días">→</button>
         </div>
@@ -1085,15 +1086,34 @@
       let marketAutoplayTimer = null;
       const programmeDetails = {
         'day-four': [
-          { artist: 'GERARDO QUEVEDO', time: '17:00 - 20:00' }
+          { artist: 'GERARDO QUEVEDO', time: '17:00 - 20:00' },
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' }
         ],
         'day-five': [
           { artist: 'KILIAN VIERA', time: '19:00 - 20:30' },
-          { artist: 'JIA MILES', time: '20:00 - 22:00' }
+          { artist: 'JIA MILES', time: '20:00 - 22:00' },
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' }
         ],
         'day-six': [
           { artist: 'ALBERTO MONTERREY' },
-          { artist: 'DJ ESTRO', time: '18:00 - 20:00' }
+          { artist: 'DJ ESTRO', time: '18:00 - 20:00' },
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' }
+        ],
+        'day-seven': [
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' }
+        ],
+        'day-eight': [
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' },
+          { artistKey: 'artist-tba' }
         ]
       };
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -1116,11 +1136,11 @@
         } else {
           const schedule = document.createElement('ul');
           schedule.className = 'programme-modal-schedule';
-          details.forEach(({ artist, time }) => {
+          details.forEach(({ artist, artistKey, time }) => {
             const slot = document.createElement('li');
             if (!time) slot.className = 'programme-slot--without-time';
             const performer = document.createElement('strong');
-            performer.textContent = artist;
+            performer.textContent = artistKey ? copy[artistKey] : artist;
             slot.append(performer);
             if (time) {
               const scheduleTime = document.createElement('span');
