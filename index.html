@@ -378,7 +378,7 @@
       .day-performer { display: block; white-space: nowrap; }
       .day-performer--long { font-size: clamp(1.45rem, 1.75vw, 2.25rem); }
       .day-performer--tba { white-space: normal; font-size: clamp(1.2rem, 1.55vw, 1.85rem); line-height: .9; }
-      .day-placeholder--scheduled .day-performer { display: block; width: 100%; white-space: normal; font-size: clamp(1.55rem, 2.05vw, 2.45rem); line-height: .84; letter-spacing: -.025em; }
+      .day-placeholder--scheduled .day-performer { display: block; width: 100%; white-space: nowrap; font-size: clamp(1.55rem, 2.05vw, 2.45rem); line-height: .84; letter-spacing: -.025em; }
       .day-placeholder--scheduled .day-performer--long { font-size: clamp(1.45rem, 1.8vw, 2.1rem); }
       .day-placeholder--scheduled .day-performer--tba { font-size: clamp(1.08rem, 1.2vw, 1.4rem); line-height: .9; }
       .day-placeholder--scheduled .day-performer--compact { font-size: clamp(1rem, 1.18vw, 1.35rem); line-height: .95; }
@@ -462,7 +462,7 @@
       .logo-tier-heading h2 { margin: 0; font: 600 clamp(1.55rem, 2.5vw, 2.7rem)/.78 var(--display); letter-spacing: .01em; text-transform: uppercase; }
       .logo-grid { display: grid; gap: 1px; }
       .logo-tier--tier-2 { --logo-tier-scale: .6; --logo-tier-min-height: clamp(92px, 8vw, 118px); }
-      .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 1.7vw, 24px); border: 0; background: transparent; }
+      .logo-tier--tier-2 .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.7vw, 24px); border: 0; background: transparent; }
       .logo-tier--tier-2 .logo-item { padding: 0; border: 0; background: transparent; box-shadow: none; }
       .logo-tier--tier-2 .logo-item--collaborator--center {
         grid-column: 1 / -1;
@@ -857,7 +857,7 @@
             <button class="programme-day" type="button" data-day-key="day-four" data-date="04" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">04</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer day-performer--long">Gerardo Quevedo</span><span class="day-performer">PLAYACOCO</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
             <button class="programme-day" type="button" data-day-key="day-five" data-date="05" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">05</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">Kilian Viera</span><span class="day-performer">Jia Miles</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
             <button class="programme-day" type="button" data-day-key="day-six" data-date="06" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">06</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer day-performer--long">Alberto Monterrey</span><span class="day-performer">DJ Estro</span><span class="day-performer">Yet Garbey</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-seven" data-date="07" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">07</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">DJ RAY LOPEZ</span><span class="day-performer">Pedro Afonso</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-seven" data-date="07" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">07</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">QUE CHIMBA</span><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">DJ RAY LOPEZ</span><span class="day-performer">Pedro Afonso</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
             <button class="programme-day" type="button" data-day-key="day-eight" data-date="08" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">08</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">Sandra Loal</span><span class="day-performer day-performer--compact">Pablo Saavedra y Luis Auyanet</span><span class="day-performer day-performer--tba" data-i18n="artist-tba">Artista por desvelar</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
           </div>
           <button class="programme-scroll-next" type="button" data-programme-scroll aria-label="Ver más días">→</button>
@@ -935,10 +935,11 @@
           <div class="logo-tier-heading"><h2 data-i18n="collaborator-title">Colabora</h2></div>
           <div class="logo-grid" aria-label="Marcas colaboradoras">
               <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/APERITIVOS.png" alt="Aperitivos Snack" /></div>
+              <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/MAINCA.png" alt="MAINCA" /></div>
               <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/VIAJESCANARIAS.png" alt="Viajes Canarias Europa" /></div>
               <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/GARCITECNIA.png" alt="Garcitecnia" /></div>
               <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/PARAGUAS.png" alt="Paraguas" /></div>
-              <div class="logo-item logo-item--collaborator logo-item--collaborator--center"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/DEQU-blanco.png" alt="DEQU" /></div>
+              <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/DEQU-blanco.png" alt="DEQU" /></div>
           </div>
         </div>
         <div class="organizer-block">
@@ -1137,10 +1138,10 @@
           { artist: 'YET GARBEY' }
         ],
         'day-seven': [
+          { artist: 'QUE CHIMBA', time: '17:00' },
           { artist: 'DJ XMAS MARKET' },
           { artist: 'DJ RAY LOPEZ' },
-          { artist: 'PEDRO AFONSO' },
-          { artistKey: 'artist-tba' }
+          { artist: 'PEDRO AFONSO' }
         ],
         'day-eight': [
           { artist: 'DJ XMAS MARKET' },
@@ -1150,6 +1151,43 @@
         ]
       };
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      function fitProgrammePerformers() {
+        document.querySelectorAll('.programme-day').forEach((day) => {
+          day.style.removeProperty('min-height');
+          const dayBounds = day.getBoundingClientRect();
+          const dayStyles = window.getComputedStyle(day);
+          const availableWidth = dayBounds.width - parseFloat(dayStyles.paddingLeft) - parseFloat(dayStyles.paddingRight);
+          const targetWidth = availableWidth * .7;
+          if (!targetWidth) return;
+          day.querySelectorAll('.day-placeholder--scheduled .day-performer').forEach((performer) => {
+            const inlineStyles = {
+              width: performer.style.width,
+              maxWidth: performer.style.maxWidth,
+              whiteSpace: performer.style.whiteSpace
+            };
+            performer.style.removeProperty('font-size');
+            performer.style.width = 'max-content';
+            performer.style.maxWidth = 'none';
+            performer.style.whiteSpace = 'nowrap';
+            const naturalWidth = performer.getBoundingClientRect().width;
+            const baseSize = parseFloat(window.getComputedStyle(performer).fontSize);
+            performer.style.width = inlineStyles.width;
+            performer.style.maxWidth = inlineStyles.maxWidth;
+            performer.style.whiteSpace = inlineStyles.whiteSpace;
+            if (naturalWidth && baseSize) performer.style.fontSize = `${(baseSize * targetWidth / naturalWidth).toFixed(2)}px`;
+          });
+          const primaryContent = day.firstElementChild?.getBoundingClientRect().height || 0;
+          const footerContent = day.lastElementChild?.getBoundingClientRect().height || 0;
+          const requiredHeight = primaryContent + footerContent + parseFloat(dayStyles.paddingTop) + parseFloat(dayStyles.paddingBottom) + 36;
+          const baseMinHeight = parseFloat(dayStyles.minHeight);
+          if (requiredHeight > baseMinHeight) day.style.minHeight = `${Math.ceil(requiredHeight)}px`;
+        });
+      }
+      window.addEventListener('resize', fitProgrammePerformers, { passive: true });
+      window.addEventListener('load', fitProgrammePerformers, { once: true });
+      fitProgrammePerformers();
+      document.fonts?.ready.then(fitProgrammePerformers);
 
       function refreshHeaderState() {
         siteHeader.classList.toggle('is-scrolled', window.scrollY > 28);
@@ -1388,6 +1426,7 @@
         localStorage.setItem('xmas-market-language', language);
         document.title = language === 'es' ? 'BEEFEATER XMAS MARKET 2026 — MASPALOMAS' : 'BEEFEATER XMAS MARKET 2026 — MASPALOMAS';
         refreshProgrammeModal();
+        fitProgrammePerformers();
         programmeScrollNext.setAttribute('aria-label', translations[language]['programme-scroll-label']);
         participationClose.setAttribute('aria-label', translations[language]['participation-close']);
         legalModalClose.setAttribute('aria-label', translations[language]['legal-close']);
