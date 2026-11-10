@@ -1,6 +1,8 @@
 # Logos del Market
 
-Guarda los logos PNG o JPG de cada categoría con nombres consecutivos: `01.png`, `02.png`, `03.jpg`, etc. Se mostrarán automáticamente en el carrusel correspondiente (hasta 12 por categoría).
+Guarda los logos en la categoría que corresponda. Se admiten PNG, JPG/JPEG y PDF.
+
+El nombre de cada archivo, sin la extensión, se muestra automáticamente debajo de su logo en la tarjeta. Por ejemplo, `NOMBRE DE LA MARCA.png` se verá como **NOMBRE DE LA MARCA**.
 
 Carpetas disponibles:
 
