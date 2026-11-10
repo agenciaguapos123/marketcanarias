@@ -342,12 +342,13 @@
         min-height: clamp(340px, 32vw, 490px);
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
         padding: clamp(18px, 1.5vw, 28px);
         appearance: none;
         color: inherit;
         font: inherit;
-        text-align: left;
+        text-align: center;
         cursor: pointer;
         border: 0;
         border-right: 1px solid rgba(60,7,17,.45);
@@ -356,6 +357,7 @@
         overflow: hidden;
         transition: background .25s ease, color .25s ease;
       }
+      .programme-day > span { width: 100%; }
       .programme-day:nth-child(even) { background: rgba(220,6,47,.04); }
       .programme-day:hover { color: var(--cream); background: var(--red); }
       .programme-day::after {
@@ -372,7 +374,7 @@
       .day-date { position: relative; z-index: 1; display: block; margin-top: 14px; color: var(--red); font: 700 clamp(5rem, 7.7vw, 9rem)/.66 var(--display); letter-spacing: -.08em; }
       .programme-day:hover .day-date { color: var(--gold); }
       .day-rule { position: relative; z-index: 1; display: block; width: 100%; height: 1px; margin-top: auto; background: currentColor; opacity: .42; }
-      .day-placeholder { position: relative; z-index: 1; display: block; margin: 18px 0 0; max-width: 130px; color: var(--red); font: .62rem/1.6 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+      .day-placeholder { position: relative; z-index: 1; display: block; margin: 18px auto 0; max-width: 130px; color: var(--red); font: .62rem/1.6 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
       .programme-day:hover .day-placeholder { color: var(--cream); }
       .day-placeholder--scheduled { max-width: 100%; color: #000; font: 600 clamp(2rem, 2.45vw, 3.25rem)/.84 var(--display); letter-spacing: -.015em; transition: color .25s ease; }
       .day-performer { display: block; white-space: nowrap; }
@@ -854,11 +856,11 @@
         </div>
         <div class="programme-days-wrap">
           <div class="programme-days" aria-label="Programa del 4 al 8 de diciembre">
-            <button class="programme-day" type="button" data-day-key="day-four" data-date="04" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">04</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">Gerardo Quevedo</span><span class="day-performer">PLAYACOCO</span><span class="day-performer">Sandra Loal</span><span class="day-performer">Alberto Monterrey</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-five" data-date="05" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">05</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">Greg Hazel</span><span class="day-performer">Kilian Viera</span><span class="day-performer">Jia Miles</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-six" data-date="06" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">06</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">Alberto Monterrey</span><span class="day-performer">DJ Estro</span><span class="day-performer">Yet Garbey</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-seven" data-date="07" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">07</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">QUE CHIMBA</span><span class="day-performer">DJ RAY LOPEZ</span><span class="day-performer">Pedro Afonso</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-eight" data-date="08" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">08</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">SALVAPANTALLAS</span><span class="day-performer day-performer--compact">Pablo Saavedra y Luis Auyanet</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-four" data-date="4" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">4</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">Gerardo Quevedo</span><span class="day-performer">PLAYACOCO</span><span class="day-performer">Sandra Loal</span><span class="day-performer">Alberto Monterrey</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-five" data-date="5" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">5</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">Greg Hazel</span><span class="day-performer">Kilian Viera</span><span class="day-performer">Jia Miles</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-six" data-date="6" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">6</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">Alberto Monterrey</span><span class="day-performer">DJ Estro</span><span class="day-performer">Yet Garbey</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-seven" data-date="7" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">7</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">QUE CHIMBA</span><span class="day-performer">DJ RAY LOPEZ</span><span class="day-performer">Pedro Afonso</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-eight" data-date="8" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">8</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">SALVAPANTALLAS</span><span class="day-performer day-performer--compact">Pablo Saavedra y Luis Auyanet</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
           </div>
           <button class="programme-scroll-next" type="button" data-programme-scroll aria-label="Ver más días">→</button>
         </div>
