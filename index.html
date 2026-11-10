@@ -312,15 +312,6 @@
         pointer-events: none;
       }
       .programme .section-heading { max-width: 900px; }
-      .programme-intro {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-        margin-top: 34px;
-      }
-      .programme-intro p { margin: 0; max-width: 350px; font-size: .95rem; line-height: 1.68; }
-      .programme-note { color: var(--red); font: 600 clamp(1.25rem, 2vw, 2.1rem)/.92 var(--display); letter-spacing: 0; text-transform: uppercase; }
       .programme-hours { margin-top: clamp(42px, 6vw, 72px); }
       .programme-hours > p { margin: 0 0 18px; color: var(--red); font: 500 clamp(.96rem, 1.25vw, 1.16rem) var(--mono); letter-spacing: .13em; text-transform: uppercase; }
       .programme-hours-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(60,7,17,.45); border-left: 1px solid rgba(60,7,17,.45); }
@@ -636,8 +627,7 @@
         .section { padding: 72px 20px; }
         .section-heading { font-size: .8rem; line-height: 1.58; }
         .programme::before { top: 94px; right: -32px; }
-        .programme-intro, .contact-top { grid-template-columns: 1fr; gap: 25px; }
-        .programme-intro { margin-top: 30px; }
+        .contact-top { grid-template-columns: 1fr; gap: 25px; }
         .programme-hours-grid { grid-template-columns: 1fr; }
         .programme-hour { min-height: 0; }
         .programme-days { grid-template-columns: repeat(5, clamp(245px, 72vw, 300px)); width: 100%; max-width: 100%; margin-right: 0; overflow-x: auto; scrollbar-width: none; }
@@ -694,8 +684,6 @@
         .section-label span:first-child { font-size: clamp(3rem, 14vw, 5.2rem); }
         .section-label span:not(:only-child):last-child { grid-column: 1 / -1; justify-self: center; padding-bottom: 0; font-size: .72rem; }
         .section-heading { max-width: 340px; margin: 16px auto 0; font-size: .8rem; text-align: center; }
-        .programme-intro { align-items: center; gap: 18px; margin-top: 22px; text-align: center; }
-        .programme-intro p { margin-inline: auto; font-size: 1.04rem; line-height: 1.62; }
         .programme-hours { margin-top: 30px; }
         .programme-hours > p { margin-bottom: 14px; font-size: 1.08rem; text-align: right; }
         .programme-hours-grid { border-left: 0; text-align: right; }
@@ -841,10 +829,6 @@
         <div class="section-content">
         <div class="section-label"><span data-i18n="programme-label">Programa</span><span>2026</span></div>
         <h2 class="section-heading" data-i18n="programme-title">Días para recordar.</h2>
-        <div class="programme-intro">
-          <p data-i18n="programme-copy">El cartel completo llegará más adelante. Por ahora, reserva un hueco para una Navidad que se vive fuera de casa.</p>
-          <div class="programme-note" data-i18n="programme-note">El programa se anunciará pronto.</div>
-        </div>
         <div class="programme-hours">
           <p data-i18n="general-hours-title">Horarios generales</p>
           <div class="programme-hours-grid">
@@ -1032,7 +1016,7 @@
         es: {
           'nav-home':'Inicio','nav-programme':'Programa','nav-market':'Market','nav-contact':'Contacto',
           'hero-eyebrow':'Faro de Maspalomas · Gran Canaria','hero-date-month':'DICIEMBRE','hero-copy':'Una nueva forma de vivir la Navidad. Muy pronto en el Faro de Maspalomas.','hero-meta-label':'Próximamente','hero-meta':'Faro de Maspalomas','scroll':'Desliza para descubrir',
-          'programme-label':'Programa','programme-title':'Días para recordar.','programme-copy':'El cartel completo llegará más adelante. Por ahora, reserva un hueco para una Navidad que se vive fuera de casa.','programme-note':'El programa se anunciará pronto.','general-hours-title':'Horarios generales','day-four':'Viernes','day-five':'Sábado','day-six':'Domingo','day-seven':'Lunes','day-eight':'Martes','day-placeholder':'Programa próximamente','artist-tba':'Artista por desvelar','day-open':'Ver detalle →','programme-scroll-label':'Ver más días','modal-detail-label':'Detalle del día','modal-detail-copy':'El programa detallado de este día se anunciará próximamente. Vuelve pronto para descubrirlo.','modal-close':'Cerrar detalle',
+          'programme-label':'Programa','programme-title':'Días para recordar.','general-hours-title':'Horarios generales','day-four':'Viernes','day-five':'Sábado','day-six':'Domingo','day-seven':'Lunes','day-eight':'Martes','day-placeholder':'Programa próximamente','artist-tba':'Artista por desvelar','day-open':'Ver detalle →','programme-scroll-label':'Ver más días','modal-detail-label':'Detalle del día','modal-detail-copy':'El programa detallado de este día se anunciará próximamente. Vuelve pronto para descubrirlo.','modal-close':'Cerrar detalle',
           'market-label':'Market','market-side':'Hallazgos con historia','market-title':'UN XMAS MARKET ÚNICO','market-copy':'Puestos cuidados, detalles para regalar y marcas con algo que contar.','market-cta':'QUIERO PARTICIPAR CON MI PUESTO','market-filter-all':'Todos','market-filter-accessories':'Accesorios y complementos','market-filter-fashion':'Moda','market-filter-gastronomy':'Gastronomía','market-filter-craft':'Artesanía','market-filter-art':'Arte','market-filter-gifts':'Regalos','market-slider-prev':'Ver logos anteriores','market-slider-next':'Ver más logos',
           'participation-title':'Tu puesto en el market.','participation-intro':'¿Eres una marca emergente, un artesano o un concepto totalmente nuevo? ¡Cuéntanos tu idea rellenando el formulario!','participation-action':'PARTICIPAR','participation-close':'Cerrar formulario',
           'food-side':'Sabor de mercado','food-title':'Sabor de mercado','food-copy':'Bocados que apetece probar, mesas para quedarse y ese brindis que abre la noche.','schedule-market-label':'Horario Market','schedule-market-days':'De viernes a martes','schedule-leisure-label':'Horario Zona Ocio','schedule-leisure-days':'De viernes a lunes · el martes hasta las 22:00','schedule-food-label':'Horario Foodtruck','schedule-food-days':'De viernes a lunes · el martes hasta las 22:00',
@@ -1043,7 +1027,7 @@
         de: {
           'nav-home':'Startseite','nav-programme':'Programm','nav-market':'Market','nav-contact':'Kontakt',
           'hero-eyebrow':'Faro de Maspalomas · Gran Canaria','hero-date-month':'DEZEMBER 2026','hero-copy':'Eine neue Art, Weihnachten zu erleben. Schon bald am Faro de Maspalomas.','hero-meta-label':'Demnächst','hero-meta':'Faro de Maspalomas','scroll':'Zum Entdecken scrollen',
-          'programme-label':'Programm','programme-title':'Tage, die in Erinnerung bleiben.','programme-copy':'Das vollständige Programm wird später bekannt gegeben. Reserviere dir schon jetzt Zeit für Weihnachten unter freiem Himmel.','programme-note':'Das Programm wird bald bekannt gegeben.','general-hours-title':'Allgemeine Öffnungszeiten','day-four':'Freitag','day-five':'Samstag','day-six':'Sonntag','day-seven':'Montag','day-eight':'Dienstag','day-placeholder':'Programm folgt in Kürze','artist-tba':'Künstler:in wird enthüllt','day-open':'Details ansehen →','programme-scroll-label':'Weitere Tage ansehen','modal-detail-label':'Tagesdetails','modal-detail-copy':'Das detaillierte Programm für diesen Tag wird bald bekannt gegeben. Schau bald wieder vorbei.','modal-close':'Details schließen',
+          'programme-label':'Programm','programme-title':'Tage, die in Erinnerung bleiben.','general-hours-title':'Allgemeine Öffnungszeiten','day-four':'Freitag','day-five':'Samstag','day-six':'Sonntag','day-seven':'Montag','day-eight':'Dienstag','day-placeholder':'Programm folgt in Kürze','artist-tba':'Künstler:in wird enthüllt','day-open':'Details ansehen →','programme-scroll-label':'Weitere Tage ansehen','modal-detail-label':'Tagesdetails','modal-detail-copy':'Das detaillierte Programm für diesen Tag wird bald bekannt gegeben. Schau bald wieder vorbei.','modal-close':'Details schließen',
           'market-label':'Market','market-side':'Fundstücke mit Geschichte','market-title':'EIN EINZIGARTIGER XMAS MARKET','market-copy':'Sorgfältig ausgewählte Stände, besondere Geschenkideen und Marken mit etwas zu erzählen.','market-cta':'ICH MÖCHTE MIT MEINEM STAND TEILNEHMEN','market-filter-all':'Alle','market-filter-accessories':'Accessoires und Ergänzungen','market-filter-fashion':'Mode','market-filter-gastronomy':'Gastronomie','market-filter-craft':'Kunsthandwerk','market-filter-art':'Kunst','market-filter-gifts':'Geschenke','market-slider-prev':'Vorherige Logos ansehen','market-slider-next':'Weitere Logos ansehen',
           'participation-title':'Dein Stand im Market.','participation-intro':'Bist du eine aufstrebende Marke, ein:e Kunsthandwerker:in oder ein völlig neues Konzept? Erzähl uns von deiner Idee, indem du das Formular ausfüllst!','participation-action':'TEILNEHMEN','participation-close':'Formular schließen',
           'food-side':'Marktgenuss','food-title':'Marktgenuss','food-copy':'Kleine Köstlichkeiten, Tische zum Verweilen und der Toast, der die Nacht eröffnet.','schedule-market-label':'Market-Öffnungszeiten','schedule-market-days':'Freitag bis Dienstag','schedule-leisure-label':'Öffnungszeiten Freizeitbereich','schedule-leisure-days':'Freitag bis Montag · Dienstag bis 22:00 Uhr','schedule-food-label':'Foodtruck-Öffnungszeiten','schedule-food-days':'Freitag bis Montag · Dienstag bis 22:00 Uhr',
@@ -1054,7 +1038,7 @@
         en: {
           'nav-home':'Home','nav-programme':'Programme','nav-market':'Market','nav-contact':'Contact',
           'hero-eyebrow':'Faro de Maspalomas · Gran Canaria','hero-date-month':'DECEMBER 2026','hero-copy':'A new way to experience Christmas. Coming soon to Faro de Maspalomas.','hero-meta-label':'Coming soon','hero-meta':'Faro de Maspalomas','scroll':'Scroll to discover',
-          'programme-label':'Programme','programme-title':'Days to remember.','programme-copy':'The full line-up will be revealed later. For now, save space for a Christmas made to be experienced outdoors.','programme-note':'The programme will be announced soon.','general-hours-title':'General opening hours','day-four':'Friday','day-five':'Saturday','day-six':'Sunday','day-seven':'Monday','day-eight':'Tuesday','day-placeholder':'Programme coming soon','artist-tba':'Artist to be revealed','day-open':'View details →','programme-scroll-label':'See more days','modal-detail-label':'Day details','modal-detail-copy':'The detailed programme for this day will be announced soon. Please check back shortly.','modal-close':'Close details',
+          'programme-label':'Programme','programme-title':'Days to remember.','general-hours-title':'General opening hours','day-four':'Friday','day-five':'Saturday','day-six':'Sunday','day-seven':'Monday','day-eight':'Tuesday','day-placeholder':'Programme coming soon','artist-tba':'Artist to be revealed','day-open':'View details →','programme-scroll-label':'See more days','modal-detail-label':'Day details','modal-detail-copy':'The detailed programme for this day will be announced soon. Please check back shortly.','modal-close':'Close details',
           'market-label':'Market','market-side':'Finds with a story','market-title':'A UNIQUE XMAS MARKET','market-copy':'Thoughtful stalls, gifts to give and brands with something to say.','market-cta':'I WANT A STALL AT THE MARKET','market-filter-all':'All','market-filter-accessories':'Accessories and add-ons','market-filter-fashion':'Fashion','market-filter-gastronomy':'Gastronomy','market-filter-craft':'Craftsmanship','market-filter-art':'Art','market-filter-gifts':'Gifts','market-slider-prev':'View previous logos','market-slider-next':'View more logos',
           'participation-title':'Your stall at the market.','participation-intro':'Are you an emerging brand, an artisan, or a completely new concept? Tell us about your idea by filling out the form!','participation-action':'PARTICIPATE','participation-close':'Close form',
           'food-side':'Market flavours','food-title':'Market flavours','food-copy':'Bites worth trying, tables worth staying at and that toast which starts the night.','schedule-market-label':'Market hours','schedule-market-days':'Friday to Tuesday','schedule-leisure-label':'Leisure area hours','schedule-leisure-days':'Friday to Monday · Tuesday until 22:00','schedule-food-label':'Food truck hours','schedule-food-days':'Friday to Monday · Tuesday until 22:00',
