@@ -428,8 +428,7 @@
       .market-logo-viewport::-webkit-scrollbar { display: none; }
       .market-logo-track { display: flex; width: max-content; min-width: 100%; gap: 1px; }
       .market-logo-card { flex: 0 0 clamp(215px, 25vw, 340px); min-height: 300px; display: grid; grid-template-rows: minmax(0, 1fr) auto; align-items: center; justify-items: center; gap: 18px; padding: clamp(22px, 3vw, 42px); color: var(--deep); background: var(--cream); scroll-snap-align: start; }
-      .market-logo-card img, .market-logo-card object { display: block; width: 100%; height: min(182px, 100%); max-height: 182px; object-fit: contain; }
-      .market-logo-card object { border: 0; pointer-events: none; }
+      .market-logo-card img { display: block; width: 100%; height: min(182px, 100%); max-height: 182px; object-fit: contain; }
       .market-logo-card-name { margin: 0; color: var(--red); font: 700 clamp(.66rem, .9vw, .86rem)/1.15 var(--mono); letter-spacing: .075em; text-align: center; text-transform: uppercase; overflow-wrap: anywhere; }
       .market-logo-card--generic { align-content: center; gap: 13px; text-align: center; }
       .market-logo-card--generic > span { color: rgba(60,7,17,.66); font: .66rem var(--mono); letter-spacing: .14em; }
@@ -1098,11 +1097,11 @@
       const marketSliderPrevious = document.querySelector('[data-market-slider-prev]');
       const marketSliderNext = document.querySelector('[data-market-slider-next]');
       const marketCategories = {
-        accessories: { folder: 'accesorios-complementos', files: ['ARTELIER48.jpg', 'EL RINCÓN DE CARLA.pdf', 'JAYKI.png', 'PAOLA TRIPOLONI.jpg'] },
+        accessories: { folder: 'accesorios-complementos', files: ['ARTELIER48.jpg', 'EL RINCÓN DE CARLA.png', 'JAYKI.png', 'PAOLA TRIPOLONI.jpg'] },
         fashion: { folder: 'moda', files: ['ARWAL SPORTS.PNG', 'BELEZAS DO BRASIL.jpg', 'KUROBA.png'] },
         gastronomy: { folder: 'gastronomia', files: ['THIS COOKIE 21.jpg'] },
         craft: { folder: 'artesania', files: ['ART BY ANGY.png', 'ORO VEGETAL DE BRASIL.png', 'TIERRA CERÁMICA.png'] },
-        art: { folder: 'arte', files: ['DANI HACE.pdf', 'FARO VISUAL.pdf', 'KILOS DE ARTE STUDIO.png'] },
+        art: { folder: 'arte', files: ['DANI HACE.png', 'FARO VISUAL.png', 'KILOS DE ARTE STUDIO.png'] },
         gifts: { folder: 'regalos', files: [] }
       };
       let currentLanguage = 'es';
@@ -1285,7 +1284,6 @@
       document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeLegalModal(); });
 
       function loadMarketLogo(logo) {
-        if (logo.type === 'pdf') return Promise.resolve(logo);
         return new Promise((resolve) => {
           const image = new Image();
           image.onload = () => resolve(logo);
@@ -1313,20 +1311,10 @@
           const name = document.createElement('p');
           card.className = 'market-logo-card';
           card.setAttribute('aria-label', source.name || `${categoryLabel} ${index + 1}`);
-          if (source.type === 'pdf') {
-            const documentPreview = document.createElement('object');
-            documentPreview.data = source.src;
-            documentPreview.type = 'application/pdf';
-            documentPreview.tabIndex = -1;
-            documentPreview.setAttribute('aria-label', source.name);
-            documentPreview.textContent = source.name;
-            card.append(documentPreview);
-          } else {
-            const image = document.createElement('img');
-            image.src = source.src;
-            image.alt = source.name || `${categoryLabel} ${index + 1}`;
-            card.append(image);
-          }
+          const image = document.createElement('img');
+          image.src = source.src;
+          image.alt = source.name || `${categoryLabel} ${index + 1}`;
+          card.append(image);
           name.className = 'market-logo-card-name';
           name.textContent = source.name;
           card.append(name);
@@ -1343,8 +1331,7 @@
           : [marketCategories[category]];
         const candidates = categories.flatMap(({ folder, files = [] }) => files.map((file) => ({
           src: `assets/logos/MARKET/${folder}/${encodeURIComponent(file)}`,
-          name: getMarketLogoName(file),
-          type: /\.pdf$/i.test(file) ? 'pdf' : 'image'
+          name: getMarketLogoName(file)
         })));
         const logos = (await Promise.all(candidates.map(loadMarketLogo))).filter(Boolean);
         if (request !== marketLogoRequest || category !== activeMarketCategory) return;
