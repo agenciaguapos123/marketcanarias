@@ -451,6 +451,8 @@
       .schedule-row > span { font: .61rem var(--mono); letter-spacing: .06em; text-transform: uppercase; }
       .schedule-row strong { color: var(--red); font: 600 clamp(1.25rem, 1.9vw, 2.1rem)/.8 var(--display); letter-spacing: -.035em; text-align: right; white-space: nowrap; }
       .schedule-row small { grid-column: 1 / -1; color: rgba(60,7,17,.65); font: .63rem/1.45 var(--mono); letter-spacing: .02em; }
+      .food-vendors { display: flex; width: min(100%, 190px); margin-top: 30px; padding: 9px; border: 1px solid rgba(60,7,17,.28); background: #fff; }
+      .food-vendors img { display: block; width: 100%; height: auto; object-fit: contain; }
       .food-image { position: relative; min-height: 460px; overflow: hidden; }
       .food-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .food-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(220,6,47,.22), transparent 45%); mix-blend-mode: multiply; }
@@ -721,6 +723,7 @@
         .food-copy .section-label, .food-copy .section-heading { margin-inline: auto; }
         .food-copy p { margin: 22px auto 0; font-size: 1.05rem; line-height: 1.64; }
         .food-schedule { margin: 28px auto 0; }
+        .food-vendors { margin-inline: auto; }
         .schedule-row { grid-template-columns: 1fr; justify-items: center; row-gap: 8px; padding: 16px 0; text-align: center; }
         .schedule-row > span, .schedule-row small { font-size: .78rem; }
         .schedule-row strong { font-size: 2rem; text-align: center; }
@@ -911,6 +914,7 @@
             <div class="food-schedule" aria-label="Horario Foodtruck">
               <div class="schedule-row"><span data-i18n="schedule-food-label">Horario Foodtruck</span><strong>12:00 - 1:00</strong><small data-i18n="schedule-food-days">De viernes a lunes · el martes hasta las 22:00</small></div>
             </div>
+            <div class="food-vendors"><img src="assets/logos/FOODTRUCK/AXEL%20SMASH.jpeg" alt="Axel Smash" /></div>
           </div>
           <div class="food-image"><img src="assets/market-foodtrucks.png" alt="Mercado navideño nocturno con puestos gastronómicos" /></div>
         </div>
