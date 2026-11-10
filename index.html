@@ -378,10 +378,14 @@
       .programme-day:hover .day-placeholder { color: var(--cream); }
       .day-placeholder--scheduled { max-width: 100%; color: #000; font: 600 clamp(2rem, 2.45vw, 3.25rem)/.84 var(--display); letter-spacing: -.015em; transition: color .25s ease; }
       .day-performer { display: block; white-space: nowrap; }
+      .day-performer + .day-performer { margin-top: .26em; }
+      .day-performer-name, .day-performer-time { display: block; }
+      .day-performer-time { margin-top: .36em; color: currentColor; font: 500 .52em/1 var(--mono); letter-spacing: .06em; opacity: .68; }
       .day-performer--tba { white-space: normal; font-size: clamp(1.2rem, 1.55vw, 1.85rem); line-height: .9; }
       .day-placeholder--scheduled .day-performer { display: block; width: 100%; white-space: nowrap; font-size: clamp(1.55rem, 2.05vw, 2.45rem); line-height: .84; letter-spacing: -.025em; }
       .day-placeholder--scheduled .day-performer--tba { font-size: clamp(1.08rem, 1.2vw, 1.4rem); line-height: .9; }
       .day-placeholder--scheduled .day-performer--compact { font-size: clamp(1rem, 1.18vw, 1.35rem); line-height: .95; }
+      .day-placeholder--scheduled .day-performer--compact .day-performer-time { font-size: .72em; }
       .programme-day:hover .day-placeholder--scheduled { color: var(--cream); }
       .day-open { position: relative; z-index: 1; display: block; margin-top: 18px; color: currentColor; font: .61rem var(--mono); letter-spacing: .09em; text-transform: uppercase; }
       .programme-day:focus-visible { z-index: 2; outline: 3px solid var(--red); outline-offset: -3px; }
@@ -848,11 +852,11 @@
         </div>
         <div class="programme-days-wrap">
           <div class="programme-days" aria-label="Programa del 4 al 8 de diciembre">
-            <button class="programme-day" type="button" data-day-key="day-four" data-date="4" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">4</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">Gerardo Quevedo</span><span class="day-performer">PLAYACOCO</span><span class="day-performer">Sandra Loal</span><span class="day-performer">Alberto Monterrey</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-five" data-date="5" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">5</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">Greg Hazel</span><span class="day-performer">Kilian Viera</span><span class="day-performer">Jia Miles</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-six" data-date="6" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">6</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">Alberto Monterrey</span><span class="day-performer">DJ Estro</span><span class="day-performer">Yet Garbey</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-seven" data-date="7" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">7</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">QUE CHIMBA</span><span class="day-performer">DJ RAY LOPEZ</span><span class="day-performer">Pedro Afonso</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
-            <button class="programme-day" type="button" data-day-key="day-eight" data-date="8" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">8</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer">DJ XMAS MARKET</span><span class="day-performer">SALVAPANTALLAS</span><span class="day-performer day-performer--compact">Pablo Saavedra y Luis Auyanet</span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-four" data-date="4" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-four">Viernes</span><span class="day-date">4</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer"><span class="day-performer-name">Gerardo Quevedo</span><span class="day-performer-time">17:00</span></span><span class="day-performer"><span class="day-performer-name">PLAYACOCO</span><span class="day-performer-time">PDTE</span></span><span class="day-performer"><span class="day-performer-name">Sandra Loal</span><span class="day-performer-time">PDTE</span></span><span class="day-performer"><span class="day-performer-name">Alberto Monterrey</span><span class="day-performer-time">PDTE</span></span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-five" data-date="5" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-five">Sábado</span><span class="day-date">5</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer"><span class="day-performer-name">Greg Hazel</span><span class="day-performer-time">17:00</span></span><span class="day-performer"><span class="day-performer-name">Kilian Viera</span><span class="day-performer-time">19:00</span></span><span class="day-performer"><span class="day-performer-name">Jia Miles</span><span class="day-performer-time">20:30</span></span><span class="day-performer"><span class="day-performer-name">DJ XMAS MARKET</span><span class="day-performer-time">PDTE</span></span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-six" data-date="6" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-six">Domingo</span><span class="day-date">6</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer"><span class="day-performer-name">DJ Estro</span><span class="day-performer-time">18:00</span></span><span class="day-performer"><span class="day-performer-name">DJ XMAS MARKET</span><span class="day-performer-time">PDTE</span></span><span class="day-performer"><span class="day-performer-name">Alberto Monterrey</span><span class="day-performer-time">PDTE</span></span><span class="day-performer"><span class="day-performer-name">Yet Garbey</span><span class="day-performer-time">PDTE</span></span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-seven" data-date="7" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-seven">Lunes</span><span class="day-date">7</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer"><span class="day-performer-name">QUE CHIMBA</span><span class="day-performer-time">17:00</span></span><span class="day-performer"><span class="day-performer-name">DJ XMAS MARKET</span><span class="day-performer-time">PDTE</span></span><span class="day-performer"><span class="day-performer-name">DJ RAY LOPEZ</span><span class="day-performer-time">PDTE</span></span><span class="day-performer"><span class="day-performer-name">Pedro Afonso</span><span class="day-performer-time">PDTE</span></span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
+            <button class="programme-day" type="button" data-day-key="day-eight" data-date="8" aria-haspopup="dialog"><span><span class="day-weekday" data-i18n="day-eight">Martes</span><span class="day-date">8</span><span class="day-placeholder day-placeholder--scheduled"><span class="day-performer"><span class="day-performer-name">SALVAPANTALLAS</span><span class="day-performer-time">17:00</span></span><span class="day-performer"><span class="day-performer-name">DJ XMAS MARKET</span><span class="day-performer-time">PDTE</span></span><span class="day-performer day-performer--compact"><span class="day-performer-name">Pablo Saavedra y Luis Auyanet</span><span class="day-performer-time">PDTE</span></span></span></span><span><span class="day-rule"></span><span class="day-open" data-i18n="day-open">Ver detalle →</span></span></button>
           </div>
           <button class="programme-scroll-next" type="button" data-programme-scroll aria-label="Ver más días">→</button>
         </div>
@@ -1097,32 +1101,32 @@
       const programmeDetails = {
         'day-four': [
           { artist: 'GERARDO QUEVEDO', time: '17:00 - 20:00' },
-          { artist: 'PLAYACOCO' },
-          { artist: 'SANDRA LOAL' },
-          { artist: 'ALBERTO MONTERREY' }
+          { artist: 'PLAYACOCO', time: 'PDTE' },
+          { artist: 'SANDRA LOAL', time: 'PDTE' },
+          { artist: 'ALBERTO MONTERREY', time: 'PDTE' }
         ],
         'day-five': [
-          { artist: 'DJ XMAS MARKET' },
           { artist: 'GREG HAZEL', time: '17:00 - 18:30' },
           { artist: 'KILIAN VIERA', time: '19:00 - 20:30' },
-          { artist: 'JIA MILES', time: '20:30 - 21:30' }
+          { artist: 'JIA MILES', time: '20:30 - 21:30' },
+          { artist: 'DJ XMAS MARKET', time: 'PDTE' }
         ],
         'day-six': [
-          { artist: 'DJ XMAS MARKET' },
-          { artist: 'ALBERTO MONTERREY' },
           { artist: 'DJ ESTRO', time: '18:00 - 20:00' },
-          { artist: 'YET GARBEY' }
+          { artist: 'DJ XMAS MARKET', time: 'PDTE' },
+          { artist: 'ALBERTO MONTERREY', time: 'PDTE' },
+          { artist: 'YET GARBEY', time: 'PDTE' }
         ],
         'day-seven': [
-          { artist: 'DJ XMAS MARKET' },
           { artist: 'QUE CHIMBA', time: '17:00' },
-          { artist: 'DJ RAY LOPEZ' },
-          { artist: 'PEDRO AFONSO' }
+          { artist: 'DJ XMAS MARKET', time: 'PDTE' },
+          { artist: 'DJ RAY LOPEZ', time: 'PDTE' },
+          { artist: 'PEDRO AFONSO', time: 'PDTE' }
         ],
         'day-eight': [
-          { artist: 'DJ XMAS MARKET' },
           { artist: 'SALVAPANTALLAS', time: '17:00' },
-          { artist: 'PABLO SAAVEDRA Y LUIS AUYANET' }
+          { artist: 'DJ XMAS MARKET', time: 'PDTE' },
+          { artist: 'PABLO SAAVEDRA Y LUIS AUYANET', time: 'PDTE' }
         ]
       };
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
