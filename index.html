@@ -442,8 +442,9 @@
       .schedule-row > span { font: .61rem var(--mono); letter-spacing: .06em; text-transform: uppercase; }
       .schedule-row strong { color: var(--red); font: 600 clamp(1.25rem, 1.9vw, 2.1rem)/.8 var(--display); letter-spacing: -.035em; text-align: right; white-space: nowrap; }
       .schedule-row small { grid-column: 1 / -1; color: rgba(60,7,17,.65); font: .63rem/1.45 var(--mono); letter-spacing: .02em; }
-      .food-vendors { display: flex; width: min(100%, 190px); margin-top: 30px; padding: 9px; border: 1px solid rgba(60,7,17,.28); background: #fff; }
-      .food-vendors img { display: block; width: 100%; height: auto; object-fit: contain; }
+      .food-vendors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(100%, 420px); gap: 9px; margin-top: 30px; }
+      .food-vendor { display: grid; place-items: center; min-height: 128px; padding: 9px; border: 1px solid rgba(60,7,17,.28); background: #fff; }
+      .food-vendor img { display: block; width: 100%; height: 100%; max-height: 110px; object-fit: contain; }
       .food-image { position: relative; min-height: 460px; overflow: hidden; }
       .food-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .food-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(220,6,47,.22), transparent 45%); mix-blend-mode: multiply; }
@@ -898,7 +899,10 @@
             <div class="food-schedule" aria-label="Horario Foodtruck">
               <div class="schedule-row"><span data-i18n="schedule-food-label">Horario Foodtruck</span><strong>12:00 - 1:00</strong><small data-i18n="schedule-food-days">De viernes a lunes · el martes hasta las 22:00</small></div>
             </div>
-            <div class="food-vendors"><img src="assets/logos/FOODTRUCK/AXEL%20SMASH.jpeg" alt="Axel Smash" /></div>
+            <div class="food-vendors" aria-label="Foodtrucks participantes">
+              <div class="food-vendor"><img src="assets/logos/FOODTRUCK/AXEL%20SMASH.jpeg" alt="Axel Smash" /></div>
+              <div class="food-vendor"><img src="assets/logos/FOODTRUCK/logo%202%20-%20Administracion%20Allende.jpg" alt="Allende" /></div>
+            </div>
           </div>
           <div class="food-image"><img src="assets/market-foodtrucks.png" alt="Mercado navideño nocturno con puestos gastronómicos" /></div>
         </div>
@@ -1072,9 +1076,9 @@
       const marketSliderPrevious = document.querySelector('[data-market-slider-prev]');
       const marketSliderNext = document.querySelector('[data-market-slider-next]');
       const marketCategories = {
-        accessories: { folder: 'accesorios-complementos', files: ['ARTELIER48.jpg', 'EL RINCÓN DE CARLA.png', 'JAYKI.png', 'PAOLA TRIPOLONI.jpg'] },
+        accessories: { folder: 'accesorios-complementos', files: ['ARTELIER48.jpg', 'EL RINCÓN DE CARLA.png', 'JAYKI.png', 'PAOLA TRIPOLONI.jpg', { file: 'LOGO - Amaro Secret.svg', name: 'Amaro Secret' }] },
         fashion: { folder: 'moda', files: ['ARWAL SPORTS.PNG', 'BELEZAS DO BRASIL.jpg', 'KUROBA.png', { file: 'inbound5161861519226278104 - Ia bella pulga handmade.jpg', name: 'La Bella Pulga Handmade' }] },
-        gastronomy: { folder: 'gastronomia', files: ['THIS COOKIE 21.jpg', { file: 'Logotipo Vertical Frutizum_Negro - Eliecer Monzon.jpg', name: 'Frutizum' }] },
+        gastronomy: { folder: 'gastronomia', files: ['THIS COOKIE 21.jpg', { file: 'Logotipo Vertical Frutizum_Negro - Eliecer Monzon.jpg', name: 'Frutizum' }, { file: 'LA BULÉ.png', name: 'La Bulé' }] },
         craft: { folder: 'artesania', files: ['ART BY ANGY.png', 'ORO VEGETAL DE BRASIL.png', 'TIERRA CERÁMICA.png'] },
         art: { folder: 'arte', files: ['DANI HACE.png', 'FARO VISUAL.png', 'KILOS DE ARTE STUDIO.png'] },
         gifts: { folder: 'regalos', files: [{ file: 'Logotipo-Horizontal-Valentina-Color - Valentinas Words.png', name: 'Valentinas Words' }] }
