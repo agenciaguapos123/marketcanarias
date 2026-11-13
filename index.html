@@ -490,6 +490,7 @@
       .sponsor-logo-list .logo-item { min-height: 0; padding: 0; }
       .sponsor-logo-list .logo-item--tier-1 { --logo-tier-scale: 1; min-height: clamp(118px, 11vw, 165px); }
       .sponsor-logo-list .logo-item--tier-2 { grid-column: 1 / -1; justify-self: center; width: min(100%, 250px); --logo-tier-scale: .75; min-height: clamp(94px, 7.5vw, 122px); }
+      .sponsor-logo-list--two-tier-2 .logo-item--tier-2 { grid-column: auto; justify-self: stretch; width: 100%; }
       .sponsor-logo-list .logo-item--tier-3 { grid-column: 1 / -1; justify-self: center; width: min(100%, 400px); --logo-tier-scale: 1; min-height: clamp(140px, 11vw, 176px); }
       .logo-item {
         display: grid;
@@ -914,10 +915,11 @@
         <div class="collaborate-main">
         <div class="sponsor-tiers">
           <div class="logo-tier-heading"><h2 id="sponsor-heading" data-i18n="sponsor-title">Patrocina</h2></div>
-          <div class="sponsor-logo-list" aria-labelledby="sponsor-heading">
+          <div class="sponsor-logo-list sponsor-logo-list--two-tier-2" aria-labelledby="sponsor-heading">
             <div class="logo-item logo-item--sponsor logo-item--tier-1" data-logo-tier="1"><img class="logo-image" src="assets/logos/PATROCINA/tier%201/1Beefeaterlondon.png" alt="Beefeater London" /></div>
             <div class="logo-item logo-item--sponsor logo-item--tier-1" data-logo-tier="1"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%201/2sbt-maspalomas.png" alt="Ayuntamiento de San Bartolomé de Tirajana" /></div>
             <div class="logo-item logo-item--sponsor logo-item--tier-2" data-logo-tier="2"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%202/MAHOU.png" alt="Mahou" /></div>
+            <div class="logo-item logo-item--sponsor logo-item--tier-2" data-logo-tier="2"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%202/Logo%20Coca%20Cola.png" alt="Coca-Cola" /></div>
             <div class="logo-item logo-item--sponsor logo-item--tier-3" data-logo-tier="3"><img class="logo-image logo-image--screen" src="assets/logos/PATROCINA/tier%203/01.png" alt="Mercedes-Benz Louzao" /></div>
           </div>
         </div>
@@ -930,6 +932,7 @@
               <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/GARCITECNIA.png" alt="Garcitecnia" /></div>
               <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/PARAGUAS.png" alt="Paraguas" /></div>
               <div class="logo-item logo-item--collaborator"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/DEQU-blanco.png" alt="DEQU" /></div>
+              <div class="logo-item logo-item--collaborator logo-item--collaborator--center"><img class="logo-image logo-image--screen" src="assets/logos/COLABORA/Logo%20Trade%20Project%20-%20Blanco.png" alt="Trade Project" /></div>
           </div>
         </div>
         <div class="organizer-block">
